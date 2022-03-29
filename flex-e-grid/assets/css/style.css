@@ -1,0 +1,75 @@
+:root{
+    --cor-corpo: #1D232A;
+    --cor-cabecalho: #1D232A;
+    --cor-cabecalho-mobile: #15191C;
+    --cor-menu-lateral:#15191C;
+    --cor-cartao:#2C343A;
+    --cor-fonte-padrao:#FFFFFF;
+    --cor-fonte-alternativa: #95999C;
+    --cor-links:#0480DC;
+    --cor-botao:#0480DC;
+
+}
+
+@font-face {
+    font-family: 'icones';
+    src: url(../font/icones.ttf);
+}
+
+body{
+    background-color: var(--cor-corpo);
+    /*chamou a fonte icones dentro do body*/
+    font-family: 'Open Sans','icones', sans-serif;
+    color: var(--cor-fonte-padrao);
+}
+
+.cabecalho{
+    /*todos ficam alinhados um do lado do outro.*/
+    display: flex;
+    /*space between eu já tinha visto mas n estudado.*/
+    justify-content: space-between;
+    /*stetch o elemento fica inteiro acessivel, já o center apenas o conteudo fica acessivel.*/
+    align-items: center;
+    background-color: var(--cor-cabecalho-mobile);
+    padding: 8px 16px ;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+}
+
+/*Ele criou a tag i, e criou pseudo-classes para inserir o icone dentro do elemento, tuilizando o content
+
+Como os icones, estão dentro de um arquivo fonte, eles se comportam como letras, então ele corrigiu o tamanho deles com font size
+
+*/
+
+.cabecalho__menu i::before{
+    content: "\e904";
+    font-size: 24px;
+
+}
+
+.cabecalho__notificacao i::before{
+    content: "\e906";
+    font-size: 24px;
+}
+
+.cabecalho__logo{
+    width: 40px;
+}
+
+.menu-lateral{
+    display: flex;
+    /*propriedade do flex, para deixar os elementos em coluna*/
+    flex-direction: column;
+    /*Podemos usar ainda o justify-content e o allign itens, porém agr eles se comportam diferente por causa do flex direction ele vai mexer no eixo horizontal agr*/
+    background-color: var(--cor-menu-lateral);
+    width: 75vw; /*largura da view port, VW = VIEW WIDTH NAO VH= VIEW HEIGHT*/
+    height: 100vh;
+
+}
+
+.menu-lateral__logo{
+    /*alinhamos um item ao centro e o resto ficou do jeito que estava.*/
+    align-self: center;
+    width: 118px;
+    padding: 16px;
+}

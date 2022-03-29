@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HZC | HOME</title>
+    <!--ele está usando as fontes dentro do arquivo css ao inves de usar no css.-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/" type="image/x-icon">
+</head>
+<body>
+    <!--Ele está fazendo tudo conforme o figma-->
+    <header class="cabecalho">
+        <!--Area label para colocar um texto alternativo, para ajudar na acessibilidade-->
+        <button class="cabecalho__menu" aria-label="Menu">
+            <i></i>
+        </button>
+        <img src="assets/img/logo.svg" alt="logotipo da HZC" class="cabecalho__logo">
+        <button class="cabecalho__notificacao" aria-label="Notificacao">
+            <i></i>
+        </button>
+    </header>
+    <!-- Vamos criar o menu lateral, como é lateral ele fica fora do header.-->
+    <!-- criamos todas essas tags com emmit
+        
+        nav.menu-lateral>img.menu-lateral__logo+a[href="#""].menu-lateral__link*6
+        nav com a classe menu-lateral embaixo uma img com a classe logo lateral, na mesma linha adicionamos a tag a com a propriedade href com # e com a classe menu-lateral__link vezes 6       
+    -->
+    <nav class="menu-lateral">
+        <img src="assets/img/logo.svg" alt="Logotipo da HZC" class="menu-lateral__logo">
+        <a href="#" class="menu-lateral__link">Inicio</a>
+        <a href="#" class="menu-lateral__link">Videos</a>
+        <a href="#" class="menu-lateral__link">Picos</a>
+        <a href="#" class="menu-lateral__link">Integrantes</a>
+        <a href="#" class="menu-lateral__link">Camisas</a>
+        <a href="#" class="menu-lateral__link">Pinturas</a>
+    </nav>
+
+</body>
+</html>

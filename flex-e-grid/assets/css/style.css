@@ -206,7 +206,8 @@ Como os icones, estão dentro de um arquivo fonte, eles se comportam como letras
 
 .cartao__info--valor{
     color: var(--cor-fonte-alternativa);
-    align-items:flex-start;
+    justify-content:space-between;
+    align-items:flex-end;
 }
 
 .cartao__info--tempo::before{

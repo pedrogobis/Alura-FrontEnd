@@ -62,9 +62,12 @@ Como os icones, estão dentro de um arquivo fonte, eles se comportam como letras
     flex-direction: column;
     /*Podemos usar ainda o justify-content e o allign itens, porém agr eles se comportam diferente por causa do flex direction ele vai mexer no eixo horizontal agr*/
     background-color: var(--cor-menu-lateral);
-    width: 75vw; /*largura da view port, VW = VIEW WIDTH NAO VH= VIEW HEIGHT*/
+    /*
+    width: 75vw; /*largura da view port, VW = VIEW WIDTH NAO VH= VIEW HEIGHT
     height: 100vh;
-
+    */
+    width: 75vw;
+    height: 100vh;
 }
 
 .menu-lateral__logo{
@@ -72,4 +75,24 @@ Como os icones, estão dentro de um arquivo fonte, eles se comportam como letras
     align-self: center;
     width: 118px;
     padding: 16px;
+}
+
+.menu-lateral__link{
+    height: 64px;
+    color: var(--cor-fonte-alternativa);
+    padding-left: 64px;
+    /* fez virar um display flex para poder adicionar itens*/
+    display: flex;
+    /*adicionou um icone no content e agora vamos arrumar o espaço*/
+    align-items: center;
+
+}
+
+.menu-lateral__link::before{
+    content: "\e900";
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    position: absolute;
+    left: 24px;
 }

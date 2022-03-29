@@ -68,7 +68,18 @@ Como os icones, estão dentro de um arquivo fonte, eles se comportam como letras
     */
     width: 75vw;
     height: 100vh;
+    /*eu comecei a fazer o js, e na minha cabeça eu ia deletar a classe do menu e clicando eu ia adicionar ela, mas na verdade ele vai fazer é esconder o menu por padrao na classe dele css, e quando clicar vai mudar a classe, interessante*/
+    /*Para esconder toda a classe ele está colocando a posição absoluta e colocando ele fora da tela.*/
+    position: absolute;
+    left: -100vw;
+    transition: .25s;
 }
+
+.menu-lateral--ativo{
+    left: 0;
+    transition: .25s;
+}
+
 
 .menu-lateral__logo{
     /*alinhamos um item ao centro e o resto ficou do jeito que estava.*/
@@ -85,7 +96,15 @@ Como os icones, estão dentro de um arquivo fonte, eles se comportam como letras
     display: flex;
     /*adicionou um icone no content e agora vamos arrumar o espaço*/
     align-items: center;
+}
 
+.menu-lateral__link--ativo{
+    color: var(--cor-fonte-padrao);
+    /*vamos colocar um border na esquerda ela é a camada mais de fora do box model o padding vai empurrar mais do que o alem da borda lateral
+    Entao vamos diminuir o padding, para ganhar na borda
+    */
+    padding-left: 56px;
+    border-left: 8px solid var(--cor-fonte-padrao);
 }
 
 .menu-lateral__link::before{
@@ -95,4 +114,29 @@ Como os icones, estão dentro de um arquivo fonte, eles se comportam como letras
     font-size: 24px;
     position: absolute;
     left: 24px;
+}
+
+.menu-lateral__link--inicio::before{
+    content: "\e902";
+
+}
+
+.menu-lateral__link--video::before{
+    content: "\e90e";
+}
+
+.menu-lateral__link--picos::before{
+    content: "\e909";
+}
+
+.menu-lateral__link--integrantes::before{
+    content: "\e903";
+}
+
+.menu-lateral__link--camisas::before{
+    content: "\e900";
+}
+
+.menu-lateral__link--pinturas::before{
+    content: "\e90a";
 }

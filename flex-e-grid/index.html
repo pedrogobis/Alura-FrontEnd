@@ -17,7 +17,8 @@
     <!--Ele está fazendo tudo conforme o figma-->
     <header class="cabecalho">
         <!--Area label para colocar um texto alternativo, para ajudar na acessibilidade-->
-        <button class="cabecalho__menu" aria-label="Menu">
+        <button class="cabecalho__menu" aria-label="Menu" >
+            <!-- Ele usou o listner ao invez de colocar o onclick no botão.-->
             <i></i>
         </button>
         <img src="assets/img/logo.svg" alt="logotipo da HZC" class="cabecalho__logo">
@@ -31,15 +32,37 @@
         nav.menu-lateral>img.menu-lateral__logo+a[href="#""].menu-lateral__link*6
         nav com a classe menu-lateral embaixo uma img com a classe logo lateral, na mesma linha adicionamos a tag a com a propriedade href com # e com a classe menu-lateral__link vezes 6       
     -->
-    <nav class="menu-lateral">
+    <nav class="menu-lateral ">
         <img src="assets/img/logo.svg" alt="Logotipo da HZC" class="menu-lateral__logo">
-        <a href="#" class="menu-lateral__link">Inicio</a>
-        <a href="#" class="menu-lateral__link">Videos</a>
-        <a href="#" class="menu-lateral__link">Picos</a>
-        <a href="#" class="menu-lateral__link">Integrantes</a>
-        <a href="#" class="menu-lateral__link">Camisas</a>
-        <a href="#" class="menu-lateral__link">Pinturas</a>
+        <a href="#" class="menu-lateral__link menu-lateral__link--inicio">Inicio</a>
+        <a href="#" class="menu-lateral__link menu-lateral__link--video">Videos</a>
+        <a href="#" class="menu-lateral__link menu-lateral__link--picos">Picos</a>
+        <a href="#" class="menu-lateral__link menu-lateral__link--integrantes">Integrantes</a>
+        <a href="#" class="menu-lateral__link menu-lateral__link--camisas">Camisas</a>
+        <a href="#" class="menu-lateral__link menu-lateral__link--pinturas">Pinturas</a>
     </nav>
+    <main class="principal">
+        <h2 class="titulo-pagina">Inicio.</h2>
+        <article class="cartao">
+            <img src="assets/img/banner-mobile_1.png" alt="banner do cartão" class="cartao__imagem">
+            <div class="cartao__conteudo">
+                <p class="cartao__destaque">
+                    Video em destaque.
+                </p>
+                <h3 class="cartao__titulo">HCZ - TITULO</h3>
+                <p class="cartao__perfil">Bruno Lopes</p>
+                <p class="cartoa__info cartao__info--tempo">33minutos</p>
+                <p class="cartoa__info cartao__info--visualizacao">33 visualizaçoes</p>
+                <button class="cartao__botao cartao__botao--play cartao__botao--destaque">Asistir agora</button>
+            </div>
+        </article>
 
+
+
+
+    </main>
+
+
+    <script src="assets/js/index.js"></script>
 </body>
 </html>

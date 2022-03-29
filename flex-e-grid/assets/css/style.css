@@ -143,11 +143,22 @@ Como os icones, estão dentro de um arquivo fonte, eles se comportam como letras
 
 .principal{
     padding: 24px 16px;
+    display: grid;
+    gap: 16px;
 }
 
 .titulo-pagina{
     font-size: 1.5rem;
     font-weight: 700;
+}
+
+.titulo-secao{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.camisetas__maisvendidas{
+    font-size: 18px;
 }
 
 .cartao{
@@ -159,10 +170,16 @@ Como os icones, estão dentro de um arquivo fonte, eles se comportam como letras
     background-color: var(--cor-cartao);
 }
 
+.cartao--destaque{
+    margin-bottom: 16px;
+}
+
 .cartao__conteudo{
     padding: 16px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
+    row-gap: 8px;
+    column-gap: 8px;
 }
 
 .cartao__destaque{
@@ -187,9 +204,19 @@ Como os icones, estão dentro de um arquivo fonte, eles se comportam como letras
     color: var(--cor-fonte-alternativa);
 }
 
+.cartao__info--valor{
+    color: var(--cor-fonte-alternativa);
+    align-items:flex-start;
+}
+
 .cartao__info--tempo::before{
      content: "\e90c";
      margin-left: 8px;
+}
+
+.cartao__info--valor::before{
+    content: "\e905";
+    color: var(--cor-fonte-alternativa);
 }
 
 .cartao__info--visualizacao::before{
@@ -206,12 +233,18 @@ Como os icones, estão dentro de um arquivo fonte, eles se comportam como letras
     height: 40px;
     border-radius: 10px;
     font-size: 0.9rem;
+    justify-self: flex-end;
 }
 
 
 
 .cartao__botao--play::before{
     content: "\e90b";
+    font-size: 24px;
+}
+
+.cartao__botao--comprar::before{
+    content: "\e901";
     font-size: 24px;
 }
 
@@ -226,3 +259,9 @@ Como os icones, estão dentro de um arquivo fonte, eles se comportam como letras
     margin-right: 8px;
  
 }
+
+.secao{
+    display: grid;
+    gap: 16px;
+}
+

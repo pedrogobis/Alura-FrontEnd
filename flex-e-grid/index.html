@@ -35,7 +35,7 @@
     -->
     <nav class="menu-lateral ">
         <img src="assets/img/logo.svg" alt="Logotipo da HZC" class="menu-lateral__logo">
-        <a href="#" class="menu-lateral__link menu-lateral__link--inicio">Inicio</a>
+        <a href="#" class="menu-lateral__link menu-lateral__link--inicio menu-lateral__link--ativo">Inicio</a>
         <a href="#" class="menu-lateral__link menu-lateral__link--video">Videos</a>
         <a href="#" class="menu-lateral__link menu-lateral__link--picos">Picos</a>
         <a href="#" class="menu-lateral__link menu-lateral__link--integrantes">Integrantes</a>
@@ -44,20 +44,21 @@
     </nav>
     <main class="principal">
         <h2 class="titulo-pagina">Inicio.</h2>
-        <article class="cartao cartao--destaque">
-            <img src="assets/img/banner-mobile_1.png" alt="banner do cartão" class="cartao__imagem">
+        <article class="cartao cartao--destaque destaque-video">
+            <img src="assets/img/banner-mobile_1.png" alt="banner do cartão" class="cartao__imagem cartao__imagem--mobile">
+            <img src="assets/img/banner_1.png" alt="banner do cartão" class="cartao__imagem cartao__imagem--desktop">
             <div class="cartao__conteudo">
                 <p class="cartao__destaque">
                     Video em destaque.
                 </p>
                 <h3 class="cartao__titulo">HCZ - TITULO</h3>
                 <p class="cartao__perfil">Bruno Lopes</p>
-                <p class="cartoa__info cartao__info--tempo">33minutos</p>
-                <p class="cartoa__info cartao__info--visualizacao">33 visualizaçoes</p>
+                <p class="cartao__info cartao__info--tempo">33minutos</p>
+                <p class="cartao__info cartao__info--visualizacao">33 visualizaçoes</p>
                 <button class="cartao__botao cartao__botao--play cartao__botao--destaque">Asistir agora</button>
             </div>
         </article>
-        <article class="cartao cartao--recentes">
+        <article class="cartao cartao--recentes videos-recentes">
             <h3 class="cartao__titulo">Videos recentes</h3>
             <a href="#" class="cartao__link">Ver todos</a>
             <ul class="cartao__lista">
@@ -88,7 +89,7 @@
                 </li>
             </ul>
         </article>
-        <section class="secao">
+        <section class="secao secao-videos">
             <h3 class="titulo-secao">Videos mais vistos.</h3>
             <article class="cartao">
                 <img src="assets/img/video_1.png" alt="video um" class="cartao__imagem">
@@ -97,7 +98,7 @@
                     
                     <p class="cartao__perfil">Bruno Lopes</p>
                     <h3 class="cartao__titulo">HCZ - TITULO</h3>
-                    <p class="cartoa__info cartao__info--tempo">33minutos</p>
+                    <p class="cartao__info cartao__info--tempo">33minutos</p>
                    
                     <button class="cartao__botao cartao__botao--play " aria-label="Assistir agora"></button>
                 </div>
@@ -139,7 +140,7 @@
                 </div>
             </article>
         </section>
-        <article class="cartao cartao--recentes">
+        <article class="cartao cartao--recentes produtos-recentes">
             <h3 class="cartao__titulo">Videos recentes</h3>
             <a href="#" class="cartao__link">Ver todos</a>
             <ul class="cartao__lista">
@@ -170,8 +171,9 @@
                 </li>
             </ul>
         </article>
-        <article class="cartao cartao--destaque">
-            <img src="assets/img/banner-mobile_2.png" alt="banner do cartão" class="cartao__imagem">
+        <article class="cartao cartao--destaque destaque-produtos">
+            <img src="assets/img/banner-mobile_2.png" alt="banner do cartão" class="cartao__imagem cartao__imagem--mobile">
+            <img src="assets/img/banner_2.png" alt="banner do cartão" class="cartao__imagem cartao__imagem--desktop">
             <div class="cartao__conteudo">
                 <p class="cartao__destaque">
                     Video em destaque.
@@ -183,7 +185,7 @@
                 <button class="cartao__botao cartao__botao--comprar cartao__botao--destaque">comprar agora</button>
             </div>
         </article>
-        <article class="secao">
+        <article class="secao secao-produtos">
             <h4 class="titulo-secao camisetas__maisvendidas">Camisas mais recentes</h4>
             <article class="cartao">
                 <img src="assets/img/produto_1.png" alt="video um" class="cartao__imagem">

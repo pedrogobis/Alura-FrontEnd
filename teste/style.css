@@ -39,7 +39,8 @@ body{
     min-width: 50px;
     min-height: 50px;
     gap: 16px;
-    grid-row: span 3;
+    grid-column: 4;
+    grid-row: 1 /span 3 ;
 }
 
 .principal{
@@ -49,7 +50,7 @@ body{
     min-height: 50px;
     gap: 16px;
     grid-column: span 2;
-    grid-row: span 3;
+    grid-row: 1/ span 3;
     padding: 10px;
     
 }
@@ -60,13 +61,16 @@ body{
     min-width: 50px;
     min-height: 50px;
     gap: 16px;
+    grid-column: 1;
+    grid-row: 3;
 }
 
 .conteudo__lado2{
-    background-color: pink;  
+    background-color: purple;  
     border-radius: 10px;
     min-width: 50px;
     min-height: 50px;
     gap: 16px;
-    grid-row: span 2;
+    grid-row: 1 / span 2;
+    grid-column: 1;
 }

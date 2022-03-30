@@ -82,6 +82,7 @@ Como os icones, estão dentro de um arquivo fonte, eles se comportam como letras
         height: 80px;
         /*isso reforça para as alturas sejam respeitadas.*/
         box-sizing: border-box;
+        grid-column: 2;
     }
     .cabecalho__menu{
         display: none;
@@ -212,6 +213,9 @@ Como os icones, estão dentro de um arquivo fonte, eles se comportam como letras
     .menu-lateral{
         position: static;
         width: 200px;
+        /*mandou ele colar na primeira linha, mesmo que não existia na classe dele, provavelmente ele deve estar respeitando a principal*/
+        grid-column: 1;
+        grid-row: 1 / span 2;
     }
 }
 
@@ -238,6 +242,7 @@ Como os icones, estão dentro de um arquivo fonte, eles se comportam como letras
         grid-template-columns: auto 1fr auto;
         column-gap: 32px;
         padding: 16px 60px;
+        grid-column: 2;
     }
 }
 
@@ -344,6 +349,61 @@ Como os icones, estão dentro de um arquivo fonte, eles se comportam como letras
     margin-right: 8px;
  
 }
+
+.cartao--recentes{
+    display: none;
+}
+
+@media screen and (min-width:1440px) {
+    /*Ele esta reforçando o uso de grid, vou precisar fazer um projeto com grid para praticar 100% isso pois é uma coisa que vai ser muito usada no dia a dia.*/
+    
+    .cartao--recentes{
+        display: grid ;
+        grid-template-columns: auto auto;
+        align-items: center;
+        row-gap: 24px;
+        width: 256px;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+    .cartao--recentes .cartao__titulo{
+        grid-column: auto;
+    }
+
+    .cartao__link{
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--cor-links);
+        justify-self: flex-end;
+    }
+
+    .cartao__lista {
+        display: grid;
+        row-gap: 16px;
+        grid-column: span 2;
+    }
+
+    .cartao__item{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 8px;
+    }
+    .cartao__item-thumbnail{
+        width: 32px;
+        grid-row: span 2;
+    }
+    .cartao__item-titulo{
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+        font-weight: 700;
+    }
+    .cartao__item-perfil{
+        font-size: 0.8rem;
+        color: var(--cor-fonte-alternativa);
+    }
+}
+
+
 
 .secao{
     display: grid;

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HZC | Picos</title>
+    <!--ele está usando as fontes dentro do arquivo css ao inves de usar no css.-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/" type="image/x-icon">
+</head>
+<body>
+    <!--Ele está fazendo tudo conforme o figma-->
+    <header class="cabecalho">
+        <!--Area label para colocar um texto alternativo, para ajudar na acessibilidade-->
+        <button class="cabecalho__menu" aria-label="Menu" >
+            <!-- Ele usou o listner ao invez de colocar o onclick no botão.-->
+            <i></i>
+        </button>
+        <img src="assets/img/logo.svg" alt="logotipo da HZC" class="cabecalho__logo">
+        <p class="cabecalho__perfil">Bruno Lopes</p>
+        <button class="cabecalho__notificacao" aria-label="Notificacao">
+            <i></i>
+        </button>
+    </header>
+    <!-- Vamos criar o menu lateral, como é lateral ele fica fora do header.-->
+    <!-- criamos todas essas tags com emmit
+        
+        nav.menu-lateral>img.menu-lateral__logo+a[href="#""].menu-lateral__link*6
+        nav com a classe menu-lateral embaixo uma img com a classe logo lateral, na mesma linha adicionamos a tag a com a propriedade href com # e com a classe menu-lateral__link vezes 6       
+    -->
+    <nav class="menu-lateral ">
+        <img src="assets/img/logo.svg" alt="Logotipo da HZC" class="menu-lateral__logo">
+        <a href="index.html" class="menu-lateral__link menu-lateral__link--inicio menu-lateral__link--ativo">Inicio</a>
+        <a href="#" class="menu-lateral__link menu-lateral__link--video">Videos</a>
+        <a href="picos.html" class="menu-lateral__link menu-lateral__link--picos">Picos</a>
+        <a href="#" class="menu-lateral__link menu-lateral__link--integrantes">Integrantes</a>
+        <a href="#" class="menu-lateral__link menu-lateral__link--camisas">Camisas</a>
+        <a href="#" class="menu-lateral__link menu-lateral__link--pinturas">Pinturas</a>
+    </nav>
+    <main class="principal pico">
+        <h2 class="titulo-pagina">Picos.</h2>
+        <article class="cartao cartao--destaque destaque-video">
+            <img src="assets/img/mapa-picos.png" alt="banner do cartão" class="cartao__imagem cartao__imagem--mobile">
+            <img src="assets/img/mapa-picos.png" alt="banner do cartão" class="cartao__imagem cartao__imagem--desktop">
+          
+            </div>
+        </article>
+        <section class="secao secao-videos">
+            <h3 class="titulo-secao">Mais vistos.</h3>
+            <article class="cartao">
+                <img src="assets/img/artigo_1.png" alt="video um" class="cartao__imagem">
+                <div class="cartao__conteudo">
+                    
+                    
+                    <p class="cartao__perfil">Bruno Lopes</p>
+                    <h3 class="cartao__titulo">HCZ - TITULO</h3>
+                    <p class="cartao__info cartao__info--visualizacao">3</p>
+                   
+                    <button class="cartao__botao cartao__botao--local " aria-label="Assistir agora" ><a href="gapitau.html"></a></button>
+                </div>
+            </article>
+            <article class="cartao">
+                <img src="assets/img/Rectangle 5.png" alt="video um" class="cartao__imagem">
+                <div class="cartao__conteudo">
+                    
+                    
+                    <p class="cartao__perfil">Bruno Lopes</p>
+                    <h3 class="cartao__titulo">HCZ - TITULO</h3>
+                    <p class="cartoa__info cartao__info--visualizacao">2312</p>
+                   
+                    <button class="cartao__botao cartao__botao--local " aria-label="Assistir agora"></button>
+                </div>
+            </article>
+            <article class="cartao">
+                <img src="assets/img/Rectangle 5 (1).png" alt="video um" class="cartao__imagem">
+                <div class="cartao__conteudo">
+                    
+                    
+                    <p class="cartao__perfil">Bruno Lopes</p>
+                    <h3 class="cartao__titulo">HCZ - TITULO</h3>
+                    <p class="cartoa__info cartao__info--visualizacao">3333</p>
+                   
+                    <button class="cartao__botao cartao__botao--local " aria-label="Assistir agora"></button>
+                </div>
+            </article>
+            <article class="cartao">
+                <img src="assets/img/Rectangle 5 (2).png" alt="video um" class="cartao__imagem">
+                <div class="cartao__conteudo">
+                    
+                    
+                    <p class="cartao__perfil">Bruno Lopes</p>
+                    <h3 class="cartao__titulo">HCZ - TITULO</h3>
+                    <p class="cartoa__info cartao__info--visualizacao">337</p>
+                   
+                    <button class="cartao__botao cartao__botao--local " aria-label="Assistir agora"></button>
+                </div>
+            </article>
+        </section>
+        <article class="cartao cartao--recentes videos-recentes">
+            <h3 class="cartao__titulo">Favoritos</h3>
+            <a href="#" class="cartao__link">Ver todos</a>
+            <ul class="cartao__lista">
+                <li class="cartao__item">
+                    <img src="assets/img/artigo_1.png" alt="thumbmnil" class="cartao__item-thumbnail">
+                    <h4 class="cartao__item-titulo">Gap do itau da voluntarios da patria</h4>
+                    <p class="cartao__item-perfil">Bruno Lopes</p>
+                </li>
+                <li class="cartao__item">
+                    <img src="assets/img/miniatura_4.png" alt="thumbmnil" class="cartao__item-thumbnail">
+                    <h4 class="cartao__item-titulo">borda de valores</h4>
+                    <p class="cartao__item-perfil">Bruno Lopes</p>
+                </li>
+                <li class="cartao__item">
+                    <img src="assets/img/Rectangle 5.png" alt="thumbmnil" class="cartao__item-thumbnail">
+                    <h4 class="cartao__item-titulo">Gap com mureta da voluntarios da prata</h4>
+                    <p class="cartao__item-perfil">Bruno Lopes</p>
+                </li>
+                <li class="cartao__item">
+                    <img src="assets/img/Rectangle 5 (1).png" alt="thumbmnil" class="cartao__item-thumbnail">
+                    <h4 class="cartao__item-titulo">Rampa da etnrada do tunel rebouças</h4>
+                    <p class="cartao__item-perfil">Bruno Lopes</p>
+                </li>
+                
+                <li class="cartao__item">
+                    <img src="assets/img/Rectangle 5 (2).png" alt="thumbmnil" class="cartao__item-thumbnail">
+                    <h4 class="cartao__item-titulo">Wallride de pedra PORTUGUESAS</h4>
+                    <p class="cartao__item-perfil">Bruno Lopes</p>
+                </li>
+            </ul>
+        </article>
+
+    </main>
+
+
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

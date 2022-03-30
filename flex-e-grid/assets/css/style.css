@@ -331,9 +331,19 @@ Como os icones, estão dentro de um arquivo fonte, eles se comportam como letras
     color: var(--cor-fonte-alternativa);
 }
 
+.cartao__info--visualizacao{
+    color: var(--cor-fonte-alternativa);
+}
+
 .cartao__info--visualizacao::before{
     content: "\e90f";
     margin-left: 8px;
+    color: var(--cor-fonte-alternativa);
+}
+
+.cartao__botao--local::before{
+    content: "\e908";
+    font-size: 24px;
 }
 
 .cartao__botao{

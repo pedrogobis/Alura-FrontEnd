@@ -3,7 +3,7 @@
     padding-bottom: 3.5rem;
 }
 
-.diferenciais_lista{
+.diferenciais__lista{
     display: flex;
     /*se n coube numa linha cria outra pra caber*/
     flex-wrap: wrap;
@@ -44,4 +44,14 @@
 .item__texto{
     line-height: normal;
     
+}
+@media screen and (min-width:1024px) {
+    .diferenciais{
+        background-color: var(--cinza-claro);
+
+    }
+
+    .diferenciais__lista{
+        justify-content: space-around;
+    }
 }

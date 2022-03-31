@@ -37,17 +37,28 @@
     display:none;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
     .sobre{
-        display: grid;
-        grid-template-columns: auto 1fr;
+        display: flex;
+        
     }
     .sobre__conteudo{
-        columns: 1;
+        margin-right: 3rem;
+    }
+
+    .sobre__texto{
+        text-align: left;
+    }
+
+    .sobre__texto--divisao{
+        border-bottom: 1px solid var(--cinza-medio);
+        padding-bottom: 1.5rem;
     }
 
     .sobre__imagem{
-        display: show;
-        columns: 2;
+        /*para voltar a aparecer use display block*/
+        display: block;
+    
     }
 }
+

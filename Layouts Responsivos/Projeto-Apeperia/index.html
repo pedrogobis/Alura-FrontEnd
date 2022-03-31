@@ -5,24 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apeperia</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/cabecalho.css">
+    <link rel="stylesheet" href="assets/css/chamada.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="cabecalho container">
         <!--
             manter na mesma linha é o simbulo de +
             header>img+nav>ul>li*5>a
         -->
-        <img src="a" alt="">
-        <nav>
+        <img class="cabecalho__logo" src="assets/img/logo-apeperia.svg" alt="Apeperia da logo">
+        <nav class="cabecalho__navegacao">
             <ul>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
+                <li class="cabecalho__link"><a href="#">Sobre</a></li>
+                <li class="cabecalho__link"><a href="#">Planos</a></li>
+                <li class="cabecalho__link"><a href="#">Blog</a></li>
+                <li class="cabecalho__link"><a href="#">Destaques</a></li>
+                <li class="cabecalho__link"><a href="#">Instutucional</a></li>
+                <li class="cabecalho__link"><a href="">Contato</a></li>
             </ul>
         </nav>
     </header>
+    <main>
+        <section class="chamada container">
+            <h1 class="chamada__titulo">Aplicativos Na Medida</h1>
+            <p class="chamada__texto">Apeperia tem um jeito inovador de comparar e montar aplicativos para pequenas e médias empresas.</p>
+            <a class="chamada__botao botao" href="#">Conheça os planos</a>
+        </section>
+    </main>
 </body>
 </html>

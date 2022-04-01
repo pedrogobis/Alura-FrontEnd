@@ -1,0 +1,48 @@
+/*importando as variaveis nesse arquivo, então nao vamos precisar colocar os var(nome), apenas digitamos a cor diretamente.
+ e também não precisamos importar no arquivo html, apenas inserindo o base.css ele vai importar também esses outros css's*/
+@import url(_variaveis.css);
+@import url(_reset.css);
+
+
+
+body{
+    background-image: url(../imgs/fundo-textura.png), url(../imgs/fundo-linhas.png);
+    background-position: center;
+    font-family: var(--familia-corpo);
+    font-size: var(--familia-tamanho);
+    color: var(--cinza);
+}
+
+.container{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.titulo{
+    font-size: var(--tamanho-titulo);
+}
+
+.titulo--destaque{
+    font-family: var(--familia-destaque);
+    color: var(--preto);
+    font-size: var(--tamanho-titulo-destaque);
+    font-weight: var(--peso-titulo-destaque);
+    
+    /*vai forçar a quebra de linha.*/
+    display: block;
+
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+}
+
+.alinhamento--esquerda{
+    text-align: left;
+}
+
+.alinhamento--meio{
+    text-align: center;
+}
+
+.texto{
+    line-height: 26px;
+}

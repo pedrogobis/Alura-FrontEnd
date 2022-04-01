@@ -1,0 +1,32 @@
+.input{
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+
+    width: 100%;
+
+    padding: 1.75rem;
+    /*Sempre que colocar um width e um padding é interessante colocar um box-sizing para garantir o tamanho absoluto*/
+    box-sizing: border-box;
+     
+    margin-bottom: 1rem;
+
+    border: none;
+    /*Por mais que o valor padrão do input já seja branco, o ideal é re-definir a cor para n se ter problemas futuros.*/
+    background-color: var(--branco);
+
+    box-shadow: 10px 10px 30px var(--preto-sombra);
+
+}
+
+.input--icone{
+    padding-left: 4.25rem;
+
+    background-repeat: no-repeat;
+    background-position: left 1.75rem center;
+    
+}
+
+.input--email{
+    background-image: url(../imgs/icons/mail.svg);
+}

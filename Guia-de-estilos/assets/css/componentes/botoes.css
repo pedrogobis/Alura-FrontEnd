@@ -1,0 +1,25 @@
+.botao{
+    background-color: var(--amarelo) ;
+    
+    text-align: center;
+    /*inherit vai puxar as informaçoes da tag a cima*/
+    font-family: inherit;
+    font-weight: var(--peso-botao);
+    color: var(--branco);
+    
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
+    box-shadow: 10px 10px 30px var(--amarelo-sombra);
+    
+    border: none;
+}
+
+.botao--alternativo{
+    /*unset deixou sem valor*/
+    background-color: unset ;
+    color: var(--amarelo);
+    box-shadow: none;
+    border: 1px solid var(--amarelo);
+}

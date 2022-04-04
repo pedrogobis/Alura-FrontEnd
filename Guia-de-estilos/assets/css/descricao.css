@@ -1,0 +1,23 @@
+.descricao-produto{
+    padding-top: 2.5rem;
+    margin-bottom: 2.5rem;
+
+    background-color: var(--branco);
+    opacity: .7;
+}
+
+.descricao-produto__titulo{
+
+}
+
+.descricao-produto__preco{
+    margin-bottom: 1.8rem;
+}
+
+.descricao-produto__texto{
+
+}
+
+.descricao-produto__imagem{
+    
+}

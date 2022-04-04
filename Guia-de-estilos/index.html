@@ -13,11 +13,22 @@
     <link rel="stylesheet" href="assets/css/componentes/cartao.css">
     <link rel="stylesheet" href="assets/css/componentes/item.css">
     <link rel="stylesheet" href="assets/css/componentes/produto.css">
+    <link rel="stylesheet" href="assets/css/componentes/video.css">
+    <link rel="stylesheet" href="assets/css/componentes/cabecalho.css">
+    <link rel="stylesheet" href="assets/css/componentes/rodape.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@900&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="container cabecalho">
+        <img src="assets/imgs/icons/logo.svg" alt="logo da casa verde" class="cabecalho__logo">
+        <a href="#" aria-label="meu carrinho de compras">
+            <img src="assets/imgs/icons/carrinho.svg" alt="icone carrinho de compras" class="cabecalho__carrinho">
+        </a>
+    
+    </header>
+
     <main class="container">
         <section>
         
@@ -60,6 +71,31 @@
                         <span class="produto__comprar--icone"></span></a>
                 </div>
             </article>
+            <article class="cartao-de-video">
+                <div class="cartao-de-video__video"><img class="cartao-de-video__banner" src="https://picsum.photos/278/252" alt="banner do video"></div>
+                <h3 class="cartao-de-video__titulo">Video XPZ</h3>
+                <p>Publicado em março de 2020</p>
+            </article>
     </main>
+    <footer class="container rodape">
+        <img src="assets/imgs/icons/logo.svg" alt="logo da casa verde" class="rodape__logo">
+        <ul class="rodape__social">
+            <li><a href="#" class="rodape__social-midia" title="facebook"><img src="assets/imgs/icons/facebook.svg" alt="icone do facebook da casa verde"></a></li>
+            <li><a href="#" class="rodape__social-midia" title="twitter"><img src="assets/imgs/icons/twitter.svg" alt="icone twitter da casa verde"></a></li>
+            <li><a href="#" class="rodape__social-midia" title="instagram"><img src="assets/imgs/icons/instagram.svg" alt="icone instagram da casa verde"></a></li>
+        </ul>
+        <address class="rodape__unidade texto">
+            <span class="rodape__unidade-titulo">Rio de Janeiro</span>
+            Rua Siqueira Campos, 171, 303 <br>
+            Copacabana <br>
+            Telefone: (21) 99876-0099
+        </address>
+        <address class="rodape__unidade texto">
+            <span class="rodape__unidade-titulo">São Paulo</span>
+            Rua Anita Garibaldi, 33, 13 <br>
+            Sé <br>
+            Telefone: (11) 99875-2201
+        </address>
+    </footer>
 </body>
 </html>

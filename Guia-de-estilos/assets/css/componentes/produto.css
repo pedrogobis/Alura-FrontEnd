@@ -1,0 +1,64 @@
+.produto{
+    margin-bottom: 1rem;
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 50%;
+
+    /*Position relative para imagem flutuar, na classe mae, position absolute na classe do item que vai flutuar*/
+    position: relative;
+    overflow: hidden;
+
+    background-color: var(--branco);
+    box-shadow: 10px 10px 30px var(--preto-sombra);
+
+    box-sizing: border-box;
+
+    min-height: 12.5rem;
+}
+
+.produto__imagem{
+    position: absolute;
+    top: 50%;
+    left: -8rem;
+
+    /*pra deixar a imagem* na metade do cartao*/
+    transform: translateY(-50%);
+
+    /*para garantir que a imagem va ficar atras do conteudo.*/
+    z-index: -1;
+
+    width: 18.75rem;
+}
+
+.produto__conteudo{
+    /*como na classe mae adicionamos o position, todos os itens vamos colocar também*/
+    position: relative;
+    /*para garantir que o texto fique em cima da imagem*/
+    z-index: 2;
+}
+
+.produto__titulo{
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+
+.produto__preco{
+    margin-bottom: 1.5rem;
+}
+
+.produto__comprar{
+    color: var(--amarelo);
+
+    display: flex;
+    align-items: center;
+}
+
+.produto__comprar--icone{
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    margin-left: 1.75rem;
+    background-image: url(../../imgs/icons/seta.svg);
+    background-size: contain;
+}

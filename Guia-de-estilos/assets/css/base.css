@@ -11,6 +11,8 @@ body{
     font-family: var(--familia-corpo);
     font-size: var(--familia-tamanho);
     color: var(--cinza);
+    
+    
 }
 
 .container{

@@ -1,13 +1,21 @@
-.descricao-produto{
-    padding-top: 2.5rem;
-    margin-bottom: 2.5rem;
 
+
+.descricao-produto-chamada{
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.856), rgba(255, 255, 255, 0.397)) ;
+    
+}
+
+.descricao-produto{
     background-color: var(--branco);
-    opacity: .7;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+
 }
 
 .descricao-produto__titulo{
-
+    margin-bottom: 1.3rem;
 }
 
 .descricao-produto__preco{
@@ -19,5 +27,10 @@
 }
 
 .descricao-produto__imagem{
+   
+    width: 100%;
+    align-items: center;
+    text-align: center;
+
     
 }

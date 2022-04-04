@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="assets/css/componentes/como-conseguir.css">
     <link rel="stylesheet" href="assets/css/componentes/ofertas.css">
     <link rel="stylesheet" href="assets/css/componentes/produto.css">
-    <link rel="stylesheet" href="assets/css/componentes/video.css">
+    <link rel="stylesheet" href="assets/css/descricao.css">
     <link rel="stylesheet" href="assets/css/componentes/rodape.css">
     <link href="https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@900&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -29,11 +29,13 @@
     
     </header> 
     <main>
-        <section class="container">
-            <h3>Cordyline fruticosa</h3>
-            <p>R$ 20,00</p>
-            <p>Sed arcu risus, posuere viverra imperdiet eu, commodo interdum enim. Suspendisse finibus, quam dictum vestibulum tristique, nisi lectus luctus tellus, eget faucibus</p>
-            <img src="assets/imgs/produto-02.png" alt="imagem da planta cordyline fruticosa">
+        <section class=" container">
+            <h3 class="titulo--destaque">Cordyline fruticosa</h3>
+            <article class=" descricao-produto-chamada">
+                <p class="descricao-produto__preco">R$ 20,00</p>
+                <p>Sed arcu risus, posuere viverra imperdiet eu, commodo interdum enim. Suspendisse finibus, quam dictum vestibulum tristique, nisi lectus luctus tellus, eget faucibus</p>
+                <img class="descricao-produto__imagem" src="assets/imgs/produto-02.png" alt="imagem da planta cordyline fruticosa">
+            </article>
             <button class="botao">
                 Comprar agora
             </button>
@@ -41,6 +43,49 @@
                 Adicionar ao carrinho
             </button>
         </section>
+
+        <section class="container descricao-produto">
+            <h3 class="titulo--destaque descricao-produto__titulo">Descrição do produto</h3>
+            <p>Sed arcu risus, posuere viverra imperdiet eu, commodo interdum enim. Suspendisse finibus, quam dictum</p>
+            <a class="produto__comprar" href="#">Leia mais</a>
+        </section>
+        <section class="ofertas container">
+            <h2 class="titulo alinhamento--meio">Conheça produtos
+                <span class="titulo--destaque">Similares</span>
+            </h2>
+            <ul>
+                <li class="produto">
+                    <img src="assets/imgs/produto-04.png" alt="foto do produto 4" class="produto__imagem">
+                    <div class="produto__conteudo">
+                        <h3 class="produto__titulo titulo--destaque">Cyperus
+                            rotundus</h3>
+                        <p class="produto__preco">R$: 20,00</p>
+                        <a href="" class="produto__comprar">Comprar<span class="produto__comprar--icone"></span></a>
+                    </div>
+                </li>
+                <li class="produto">
+                    <img src="assets/imgs/produto-05.png" alt="foto do produto 5" class="produto__imagem">
+                    <div class="produto__conteudo">
+                        <h3 class="produto__titulo titulo--destaque">Delairea
+                            odorata</h3>
+                        <p class="produto__preco">R$: 20,00</p>
+                        <a href="" class="produto__comprar">Comprar<span class="produto__comprar--icone"></span></a>
+                    </div>
+                </li>
+                <li class="produto">
+                    <img src="assets/imgs/produto-06.png" alt="foto do produto 6" class="produto__imagem">
+                    <div class="produto__conteudo">
+                        <h3 class="produto__titulo titulo--destaque">Datura
+                            metel</h3>
+                        <p class="produto__preco">R$: 20,00</p>
+                        <a href="" class="produto__comprar">Comprar<span class="produto__comprar--icone"></span></a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+
+
     </main>
     <footer class="container rodape">
         <img src="assets/imgs/icons/logo.svg" alt="logo da casa verde" class="rodape__logo">

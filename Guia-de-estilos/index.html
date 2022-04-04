@@ -7,17 +7,16 @@
     <title>Casa Verde</title>
     <link rel="shortcut icon" href="assets/imgs/icons/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/componentes/botoes.css">
+    <link rel="stylesheet" href="assets/css/componentes/cabecalho.css">
+    <link rel="stylesheet" href="assets/css/componentes/rodape.css">
     <link rel="stylesheet" href="assets/css/componentes/input.css">
+    <link rel="stylesheet" href="assets/css/componentes/botoes.css">
+    <link rel="stylesheet" href="assets/css/componentes/chamada.css">
     <link rel="stylesheet" href="assets/css/componentes/cartao.css">
     <link rel="stylesheet" href="assets/css/componentes/item.css">
     <link rel="stylesheet" href="assets/css/componentes/produto.css">
     <link rel="stylesheet" href="assets/css/componentes/video.css">
-    <link rel="stylesheet" href="assets/css/componentes/cabecalho.css">
-    <link rel="stylesheet" href="assets/css/componentes/rodape.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <link href="https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@900&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -27,75 +26,43 @@
             <img src="assets/imgs/icons/carrinho.svg" alt="icone carrinho de compras" class="cabecalho__carrinho">
         </a>
     
-    </header>
-
-    <main class="container">
-        <section>
-        
-            <button class="botao">
-                BTN REAL
-            </button>
-            <p class="botao">botao fake 2</p>
-            
-            <button class="botao botao--alternativo">diferente</button>
-
-            <input type="text" class="input input--icone input--email" placeholder="insira seu email" area-label="Insira seu email">
-
+    </header> 
+   <main >
+        <section class="chamada container">
+            <h2 class="titulo alinhamento--esquerda">Sua casa com as 
+                <span class="titulo--destaque">melhores plantas</span></h2>
+                <p class="texto chamada__texto">
+                    Encontre aqui uma vasta seleção de plantas para decorar a sua casa e torná-lo uma pessoa mais feliz no seu dia a dia. Entre com seu e-mail e assine nossa newsletter para saber das novidades da marca
+                </p>
+                <img class="chamada__imagem" src="assets/imgs/imagem-hero1.png" alt="foto de uma planta">
+                <form class="chamada__formulario" action="#">
+                    <input type="text" class="input input--icone input--email" placeholder="Insira seu e-mail" aria-label="insira seu email">
+                    <button class="botao">Assinar newsletter</button>
+                </form>
         </section>
 
-        <article class="cartao"> 
-            <h2 class="titulo alinhamento--meio">como conseguir
-                <span class="titulo--destaque">minha planta</span></h2>
-                <ul class="lista-item">
-                    <li class="item">
-                        <span class="item__icone item__icone--cursor"></span>
-                        <p>Escolha suas plantas</p>
-                    </li>
-                    <li class="item">
-                        <span class="item__icone item__icone--carrinho"></span>
-                        <p>faça seu pedido</p>
-                    </li>
-                    <li class="item">
-                        <span class="item__icone item__icone--truck"></span>
-                        <p>Aguarde na sua casa</p>
-                    </li>
-                </ul>
-        </article>
-            <article class="produto">
-                <img src="assets/imgs/produto-011.png" alt="imagem da planta ajuga reptans" class="produto__imagem">
-                <div class="produto__conteudo">
-                    <h3 class="produto__titulo titulo--destaque">Ajuga reptans</h3>
-                    <p class="produto__preco">R$ 20,00</p>
-                    <a href="#" class="produto__comprar">
-                        Comprar
-                        <span class="produto__comprar--icone"></span></a>
-                </div>
-            </article>
-            <article class="cartao-de-video">
-                <div class="cartao-de-video__video"><img class="cartao-de-video__banner" src="https://picsum.photos/278/252" alt="banner do video"></div>
-                <h3 class="cartao-de-video__titulo">Video XPZ</h3>
-                <p>Publicado em março de 2020</p>
-            </article>
-    </main>
-    <footer class="container rodape">
-        <img src="assets/imgs/icons/logo.svg" alt="logo da casa verde" class="rodape__logo">
-        <ul class="rodape__social">
-            <li><a href="#" class="rodape__social-midia" title="facebook"><img src="assets/imgs/icons/facebook.svg" alt="icone do facebook da casa verde"></a></li>
-            <li><a href="#" class="rodape__social-midia" title="twitter"><img src="assets/imgs/icons/twitter.svg" alt="icone twitter da casa verde"></a></li>
-            <li><a href="#" class="rodape__social-midia" title="instagram"><img src="assets/imgs/icons/instagram.svg" alt="icone instagram da casa verde"></a></li>
-        </ul>
-        <address class="rodape__unidade texto">
-            <span class="rodape__unidade-titulo">Rio de Janeiro</span>
-            Rua Siqueira Campos, 171, 303 <br>
-            Copacabana <br>
-            Telefone: (21) 99876-0099
-        </address>
-        <address class="rodape__unidade texto">
-            <span class="rodape__unidade-titulo">São Paulo</span>
-            Rua Anita Garibaldi, 33, 13 <br>
-            Sé <br>
-            Telefone: (11) 99875-2201
-        </address>
-    </footer>
+
+        
+   </main>
+   <footer class="container rodape">
+    <img src="assets/imgs/icons/logo.svg" alt="logo da casa verde" class="rodape__logo">
+    <ul class="rodape__social">
+        <li><a href="#" class="rodape__social-midia" title="facebook"><img src="assets/imgs/icons/facebook.svg" alt="icone do facebook da casa verde"></a></li>
+        <li><a href="#" class="rodape__social-midia" title="twitter"><img src="assets/imgs/icons/twitter.svg" alt="icone twitter da casa verde"></a></li>
+        <li><a href="#" class="rodape__social-midia" title="instagram"><img src="assets/imgs/icons/instagram.svg" alt="icone instagram da casa verde"></a></li>
+    </ul>
+    <address class="rodape__unidade texto">
+        <span class="rodape__unidade-titulo">Rio de Janeiro</span>
+        Rua Siqueira Campos, 171, 303 <br>
+        Copacabana <br>
+        Telefone: (21) 99876-0099
+    </address>
+    <address class="rodape__unidade texto">
+        <span class="rodape__unidade-titulo">São Paulo</span>
+        Rua Anita Garibaldi, 33, 13 <br>
+        Sé <br>
+        Telefone: (11) 99875-2201
+    </address>
+</footer>
 </body>
 </html>

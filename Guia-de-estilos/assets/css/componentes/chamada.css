@@ -1,0 +1,34 @@
+.chamada{
+    padding-top: 2.5rem;
+    margin-bottom: 2.5rem;
+
+    background-image: url(../../imgs/splash-chamada.svg);
+    background-repeat: no-repeat;
+    /*isso aqui que foi o posicionamento do splash, ele colocou pra começar no top, com -4rem para aparecer só a bundinha dela, e o sentido para o right direita.*/
+    background-position:  top -4rem right;
+    /*vamos colocar o relativo, para poder posicionar corretamente e a imagem da planta.*/
+    position: relative;
+}
+
+.chamada__texto{
+    /*isso que vai limitar o texto da chamada, será colocado no p provavelmente*/
+    width: 12.5rem;
+    margin-bottom: 1.55rem;
+}
+
+.chamada__imagem{
+    /*parametro absolute para poder posicionar ela pelo container inteiro.*/
+    position: absolute;
+    /*agora vamos definir o posicionamento da imagem.*/
+    top: 3.25rem;
+    right: 0;
+
+
+}
+
+.chamada__formulario{
+    /*vai deixar isso a cima da imagem*/
+    position: relative;
+    /*index dele vai ser 2 pois a imagem vai ser a primeira, então é como se estivessimos colocando uma camada em cima da imagem*/
+    z-index: 2;
+}

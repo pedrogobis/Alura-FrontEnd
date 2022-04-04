@@ -27,7 +27,7 @@
     
     </header>
 
-    <main class="container">
+    <main >
         <section>
         
             <button class="botao">
@@ -60,7 +60,7 @@
                 </ul>
         </article>
             <article class="produto">
-                <img src="assets/imgs/produto-011.png" alt="imagem da planta ajuga reptans" class="produto__imagem">
+                <img src="assets/imgs/produto-01.png" alt="imagem da planta ajuga reptans" class="produto__imagem">
                 <div class="produto__conteudo">
                     <h3 class="produto__titulo titulo--destaque">Ajuga reptans</h3>
                     <p class="produto__preco">R$ 20,00</p>
@@ -69,12 +69,22 @@
                         <span class="produto__comprar--icone"></span></a>
                 </div>
             </article>
-            <article class="cartao-de-video">
-                <div class="cartao-de-video__video"><img class="cartao-de-video__banner" src="https://picsum.photos/278/252" alt="banner do video"></div>
+            <article class="container cartao-de-video">
+                <div class="cartao-de-video__video"><img class="" src="https://picsum.photos/278/252" alt="banner do video"></div>
                 <h3 class="cartao-de-video__titulo">Video XPZ</h3>
                 <p>Publicado em março de 2020</p>
             </article>
-    </main>
+    
+            <!--
+
+                comandos emmit, com colchetes podemos alterar itens da tag,no exemplo alteramos o src, o simbulo de '$' faz um contador, então como mandamos fazer 6lis ele vai alterar cada valor em cada linha, podemos fazer isso para padronizar e chamar os arquivos, e para nao fazer o emmit confundir o '$' de contador colocamos um contra barra '\' para fazer o emmit ignorar aquele simbulo naquele momento. 
+
+            ul>li*6.produto>img.produto__imagem[src="assets/imgs/produto-0$" alt="Foto do produto $"]+div.produto__conteudo>h3.produto__titulo.titulo--destaque+p.produto__preco{R\$ 20,00}+a.produto__comprar>span.produto__comprar--icone
+            -->
+
+        </main>
+
+
     <footer class="container rodape">
         <img src="assets/imgs/icons/logo.svg" alt="logo da casa verde" class="rodape__logo">
         <ul class="rodape__social">

@@ -221,7 +221,7 @@ body {
 
 	.cabecalhoPrincipal-nav-link {
 		border-radius: 5px;
-		border: 1px solid #9799A6;
+		border-bottom: 1px solid #9799A6;
 	}
 
 	.cabecalhoPrincipal-nav-link:hover {

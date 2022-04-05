@@ -55,3 +55,50 @@
 .conteudoPrincipal-cursos-link:nth-child(4n+1){
     margin-left : 0;
 }
+
+/*Mobile*/
+@media screen and (max-width:768px) {
+    
+
+.cabecalhoPrincipal-nav{
+    flex-direction: column;
+    
+}
+.cabecalhoPrincipal .container{
+    flex-direction: column;
+    align-items: initial;
+    text-align: center;
+}
+
+.conteudoPrincipal-cursos{
+    flex-direction: colum;
+}
+
+.conteudoPrincipal-cursos-link{
+    width: 100%;
+    
+}
+
+.rodapePrincipal-navMap-list{
+    /*vai calcular sozinho, assim n vai quebrar linhas e ir pra outra coluna*/
+    height: auto;
+}
+
+.rodapePrincipal-patrocinadores .container{
+    flex-direction: column;
+    align-items: center;
+}
+
+.rodapePrincipal-contatoForm{
+    width: 100%;
+}
+
+.rodapePrincipal-patrocinadores-list{
+    width: 100%;
+    margin: 0;
+}
+
+.rodapePrincipal-contatoForm-fieldset{
+    justify-content: center;
+}
+}

@@ -40,7 +40,10 @@
 
 .conteudoPrincipal-cursos{
     display: flex;
+    
     flex-wrap: wrap;
+    /*flex-wrap: wrap-reverse; inverteu a coluna*/
+    /*flex-direction: row-reverse; - inverteu a linha*/
     
 }
 

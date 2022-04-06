@@ -56,49 +56,75 @@
     margin-left : 0;
 }
 
+.videoSobre .container{
+    display: flex;
+}
+
+.videoSobre-sobre{
+    text-align: center;
+    /*Display flex sempre colocado do lado
+    */
+    display: flex;
+    /*display direction colum, e ele tomou um width de 100% sem precisarmos fazer isso.*/
+    flex-direction: column;
+    flex-grow: 2;
+    
+}
+.videoSobre-sobre-list{
+    flex-grow: 1;
+}
+.videoSobre-video{
+    flex-grow: 1;
+}
+
+
 /*Mobile*/
 @media screen and (max-width:768px) {
     
 
-.cabecalhoPrincipal-nav{
-    flex-direction: column;
-    
-}
-.cabecalhoPrincipal .container{
-    flex-direction: column;
-    align-items: initial;
-    text-align: center;
-}
+    .cabecalhoPrincipal-nav{
+        flex-direction: column;
+        
+    }
+    .cabecalhoPrincipal .container{
+        flex-direction: column;
+        align-items: initial;
+        text-align: center;
+    }
 
-.conteudoPrincipal-cursos{
-    flex-direction: colum;
-}
+    .conteudoPrincipal-cursos{
+        flex-direction: colum;
+    }
 
-.conteudoPrincipal-cursos-link{
-    width: 100%;
-    
-}
+    .conteudoPrincipal-cursos-link{
+        width: 100%;
+        
+    }
 
-.rodapePrincipal-navMap-list{
-    /*vai calcular sozinho, assim n vai quebrar linhas e ir pra outra coluna*/
-    height: auto;
-}
+    .rodapePrincipal-navMap-list{
+        /*vai calcular sozinho, assim n vai quebrar linhas e ir pra outra coluna*/
+        height: auto;
+    }
 
-.rodapePrincipal-patrocinadores .container{
-    flex-direction: column;
-    align-items: center;
-}
+    .rodapePrincipal-patrocinadores .container{
+        flex-direction: column;
+        align-items: center;
+    }
 
-.rodapePrincipal-contatoForm{
-    width: 100%;
-}
+    .rodapePrincipal-contatoForm{
+        width: 100%;
+    }
 
-.rodapePrincipal-patrocinadores-list{
-    width: 100%;
-    margin: 0;
-}
+    .rodapePrincipal-patrocinadores-list{
+        width: 100%;
+        margin: 0;
+    }
 
-.rodapePrincipal-contatoForm-fieldset{
-    justify-content: center;
-}
+    .rodapePrincipal-contatoForm-fieldset{
+        justify-content: center;
+    }
+
+    .cabecalhoPrincipal-nav-link-app{
+        order: -1;
+    }
 }

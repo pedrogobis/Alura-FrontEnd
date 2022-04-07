@@ -7,7 +7,7 @@ const listasDeDestinos = new Array(
     'Curitiba'
 );
 //Variaveis do sistema:
-const idadeComprador = 13;
+const idadeComprador = 31;
 const estaAcompanhada = false;
 let temPassagemComprada = false;
 const destino = "Curitiba";
@@ -31,3 +31,19 @@ while(contador < 4){
 }
 
 console.log("Destino Existe:", destinoExiste);
+
+if(podeComprar && destinoExiste){
+    console.log("Boa Viagem!");
+}else{
+    console.log("Desculpe tivemos um erro!")
+}
+
+// for sempre começa com 3 parametros, inciar a variavel, o enquanto e depois o incremento 
+for(let contad = 0; contad < 4; contad++){
+    // está rodando um if, que está verificando se há o destino que a pessoa quer, se não estiver ele n printa nada, vai passar a lista inteira e vai procurar pelo destino da pessoa 
+    if(listasDeDestinos[contador] == destino){
+        destinoExiste = true;
+        break; 
+    }
+   
+}

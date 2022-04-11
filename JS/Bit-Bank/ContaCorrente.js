@@ -1,8 +1,31 @@
+import { Cliente } from "./Cliente.js";
+
 export class ContaCorrente{
     agencia;
-    cliente;
-
+    _cliente;
     _saldo = 0; // precisei iniciar com 0 se não estava dando erro de indefinido
+
+    // o set vai obrigar que o valor do cliente seja uma instancia de cliente, então só pode ser atribuido esse valor, e não qualquer coisa, por exemplo não posso apenas atribuir um numero, ou um nome, apenas uma instancia da classe cliente.
+    set cliente(novoValor){
+        if(novoValor instanceof Cliente){
+            this._cliente = novoValor;
+        }
+        
+    }
+
+    // agora podemos pegar apenas os dados do cliente, mesmo estando privada.
+    get cliente(){
+        return this._cliente;
+    }
+
+   
+
+
+    // o interessante do get é que ele apenas visualiza, e não atribui, bom para no caso de você apenas querer ver o valor, tipo em um app da conta de banco, voce quer ver seu saldo e nao manipulalo, então usamos o get
+    get saldo(){
+        return this._saldo;
+    }
+
     sacar(valor){
         if(this._saldo >= valor){
             this._saldo -= valor;

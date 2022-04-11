@@ -26,6 +26,12 @@ export class ContaCorrente{
         return this._saldo;
     }
 
+    constructor(agencia, cliente) {
+        this.agencia = agencia;
+        this.cliente = cliente;
+    }
+
+
     sacar(valor){
         if(this._saldo >= valor){
             this._saldo -= valor;
@@ -34,6 +40,8 @@ export class ContaCorrente{
             console.log('valor insuficiente para sacar.')
         }
     }
+
+
 
     depositar(valor){
         // vamos fazer outro tipo de verificaçao para melhorar a leitura, no caso vamos deixar tudo que eu não quero dentro do if, e o que eu quero fora (else)

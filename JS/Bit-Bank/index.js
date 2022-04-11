@@ -8,7 +8,7 @@ const cliente1 = new Cliente("Ricardo", 11234566798);
 const contaCorrenteRicardo = new ContaCorrente(1001, cliente1);
 
 contaCorrenteRicardo.depositar(700)
-console.log(contaCorrenteRicardo);
+//console.log(contaCorrenteRicardo);
 
 
 
@@ -30,7 +30,8 @@ conta3.depositar(2300);
 
 //console.log(conta3.saldo);
 
-console.log(cliente2._cpf)
+// como o numero da conta corrente é um numero que é estatico e que pertence a classe e não aos objetos, para acessar ele, voce coloca o nome da classe.
+console.log(ContaCorrente.numeroDaConta);
 
 /* como agora defini como privado o cliente não da pra fazer mais assim, precisamos criar uma variavel.
 // criando uma conta de um jeito diferente

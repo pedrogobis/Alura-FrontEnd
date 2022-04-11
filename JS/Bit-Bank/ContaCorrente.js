@@ -1,6 +1,7 @@
 import { Cliente } from "./Cliente.js";
 
 export class ContaCorrente{
+    static numeroDaConta = 0; // definimos a palavra static, para que independente do objeto, esse item mude para cada uma
     agencia;
     _cliente;
     _saldo = 0; // precisei iniciar com 0 se não estava dando erro de indefinido
@@ -26,9 +27,11 @@ export class ContaCorrente{
         return this._saldo;
     }
 
+    //seguir a ordem.
     constructor(agencia, cliente) {
         this.agencia = agencia;
         this.cliente = cliente;
+        ContaCorrente.numeroDaConta ++;
     }
 
 

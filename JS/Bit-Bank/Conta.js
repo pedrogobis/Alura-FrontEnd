@@ -1,8 +1,15 @@
+// Classe abstrata = só serve para ser herdada, praticamente um molde padrão para as outras.
 export class Conta{
     constructor(saldoInicial, cliente, agencia){
+        if(this.constructor == Conta){
+            throw new Error("Você não deveria instanciar um objeto do tipo conta diretamente!")
+        }
+        
         this._saldo = saldoInicial;
         this._cliente = cliente;
         this._agencia = agencia;
+        
+        
     }
 
     set cliente(novoValor){

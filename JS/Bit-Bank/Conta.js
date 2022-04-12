@@ -30,7 +30,7 @@ export class Conta{
     //metodo abstratro, toda classe terá que re escrever ele.
     sacar(valor){
         // por algum motivo meu erro não funcionou, mas fiz igual o da aula.
-        throw new Error(" O metodo sacar da conta é abstrato,")
+        throw new Error("O método Sacar da conta é abstrato")
         // aqui vai ter a taxa, e só iremos alterar esse metodo na classe filho
         //let taxa = 1;
         // vai retornar o metodo privado

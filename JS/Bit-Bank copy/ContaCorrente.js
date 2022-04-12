@@ -1,24 +1,7 @@
-import { Conta } from "./Conta.js";
+import { Cliente } from "./Cliente.js";
 
-export class ContaCorrente extends Conta{
+export class ContaCorrente{
     static numeroDaConta = 0; // definimos a palavra static, para que independente do objeto, esse item mude para cada uma
-    
-    // alteramos a ordem do cliente e agencia para padronizar com a classe mae
-    constructor(cliente, agencia) {
-        // super signifca que estamos chamando o construtor de cima e dando esses parametros para ele, o 0 é padrão para complementar o construtor, dps o cliente e agencia mesmo nome para receberem como parametro no pai
-        super(0, cliente, agencia);
-        ContaCorrente.numeroDaConta +=1;
-    }
-
-    // sobre escrevendo o metodo/comportamento sacar
-    sacar(valor){
-        let taxa = 1.1;
-        return super._sacar(valor, taxa);
-        
-    }
-    
-}
-    /*
     agencia;
     _cliente;
     _saldo = 0; // precisei iniciar com 0 se não estava dando erro de indefinido
@@ -48,7 +31,6 @@ export class ContaCorrente extends Conta{
     constructor(agencia, cliente) {
         this.agencia = agencia;
         this.cliente = cliente;
-        this._saldo = 0;
         ContaCorrente.numeroDaConta ++;
     }
 
@@ -79,5 +61,5 @@ export class ContaCorrente extends Conta{
         const valorSacado = this.sacar(valor);
         conta.depositar(valorSacado)
     }
-    */
 
+}

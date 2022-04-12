@@ -1,23 +1,6 @@
 import {Cliente} from "./Cliente.js";
 import {ContaCorrente} from "./ContaCorrente.js";
-import { ContaPoupanca } from "./ContaPoupanca.js";
-import { Conta } from "./Conta.js";
 
-const cliente1 = new Cliente("Ricardo", 11234566798);
-const conta1 = new ContaCorrente(cliente1, 1001);
-
-conta1.depositar(500);
-conta1.sacar(100);
-
-const ContaPoupanca1 = new ContaPoupanca(50, cliente1, 1001);
-
-console.log(ContaPoupanca1);
-console.log(conta1);
-ContaPoupanca1.sacar(10);
-
-//console.log(ContaPoupanca1);
-
-/*
 // como o cpf se tornou privado, o unico modo de definir dados nele é desse jeito, por isso dava erro, enquanto o nome pode ser definido de outras maneiras.
 const cliente1 = new Cliente("Ricardo", 11234566798);
 

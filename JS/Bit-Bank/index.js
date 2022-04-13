@@ -1,4 +1,42 @@
 import {Cliente} from "./Cliente.js";
+import { Funcionario } from "./funcionarios/funcionario.js";
+import { Gerente } from "./funcionarios/gerente.js";
+import { Diretor } from "./funcionarios/diretor.js";
+import { SistemaAutenticacao } from "./SistemaAutenticacao.js";
+// ctrl d pega a proxima referencia e seleciona também.
+
+const diretor1 = new Diretor("Matheus", 32145698750, 3100);
+// funcao de cadastrar senha está dentro de funcionario.js
+diretor1.cadastrarSenha("54321")
+
+const gerente1 = new Gerente("Marcos", 23444278932, 2900);
+gerente1.cadastrarSenha("22313")
+
+const cliente1 = new Cliente("Ricardinho", 13255671003, 54321);
+
+//console.log(cliente1);
+
+//sistema de autenticacao apenas verifica se a senha é igual a senha cadastrada.
+const diretorEstaLogado = SistemaAutenticacao.login(diretor1, "54321")
+const gerenteEstaLogado = SistemaAutenticacao.login(gerente1, "22313");
+const clienteEstaLogado = SistemaAutenticacao.login(cliente1, "54321"); //estava dando erro pois no cliente não tem essa propriedade e eu estava tentando criar.
+
+console.log(clienteEstaLogado);
+//console.log(diretor1);
+//console.log(gerente1);
+
+
+
+
+
+
+
+
+
+
+/* aulas passadas 
+
+import {Cliente} from "./Cliente.js";
 import {ContaCorrente} from "./Conta/ContaCorrente.js";
 import { ContaPoupanca } from "./Conta/ContaPoupanca.js";
 import { ContaSalario } from "./Conta/ContaSalario.js";
@@ -22,7 +60,7 @@ contaSal.sacar(301)
 console.log(contaSal);  
 //console.log(conta)
 
-
+*/
 
 
 

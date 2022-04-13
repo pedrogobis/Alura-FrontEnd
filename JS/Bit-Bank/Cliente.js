@@ -8,8 +8,13 @@ export class Cliente{
     }
 
     // agora com o construtor, podemos colocar os dados do cliente como parametro no new cliente, muito mais pratico.
-    constructor(nome, cpf){
+    constructor(nome, cpf, senha){
         this.nome = nome;
-        this._cpf = cpf
+        this._cpf = cpf;
+        this._senha = senha;
+    }
+
+    autenticar(senha){
+        return true;
     }
 }

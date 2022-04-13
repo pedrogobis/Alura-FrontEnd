@@ -2,6 +2,8 @@
 Ser autenticavel significa ter o metodo autenticar"
 
 Para maior segurança, pensando em evitar vazamentos de senhas, vamos criar o metodo autenticar dentro do cliente/funcionario, para não ter chances de invasoes, assim esse sistema de verificacao não vai ter acesso a vizualizar a senha.
+
+Ducky type é normal em linguagens com tipagem fraca, provavelmente o python também
 */
 
 export class SistemaAutenticacao{

@@ -1,0 +1,10 @@
+.receita{
+    background-color: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+    margin-right: 5rem;
+    /*Tirou os 5 rem que tinha no pai pra nao ficar duplicado*/
+    width: calc(25% - 5rem);
+    
+}

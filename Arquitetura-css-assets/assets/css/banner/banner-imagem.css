@@ -1,0 +1,5 @@
+.banner__imagem{
+    /*ele fez um calculo, tirabdo 72px de 100% da view port, o tamanho do cabeçalho estava no figma, e ele colocou um pouco maior*/
+    height: calc(100vh - 72px);
+    width: 100%;
+}

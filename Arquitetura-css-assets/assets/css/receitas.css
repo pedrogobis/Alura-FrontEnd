@@ -1,0 +1,8 @@
+.receitas{
+    background: #e5e5e5;
+    display: flex;
+    /*quebra automaticamente de linha de acordo com o tamanho da pagina.*/
+    flex-wrap: wrap;
+    padding: 5rem 0 0 5rem;
+    
+}

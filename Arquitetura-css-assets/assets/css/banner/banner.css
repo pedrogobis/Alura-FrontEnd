@@ -2,3 +2,4 @@
     /*falou que o filho tem que ser relativo ao pai e nao a pagina, se só colocar absolute no filho ele vai ser em relacao a pagina inteira*/
     position: relative;
 }
+

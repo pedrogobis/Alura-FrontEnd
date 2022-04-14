@@ -1,9 +1,26 @@
 .cabecalho{
     align-items: center;
     background-color: #f9f9f9;
-    display: flex;
+    display:flex;
     justify-content: space-between;
     padding-left: 2rem;
     padding-right: 2rem;
 
+}
+
+@media screen and (min-width: 0) {
+    .cabecalho{
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 1rem;
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+    .cabecalho{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 5rem;
+    }
 }

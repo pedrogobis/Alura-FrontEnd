@@ -1,5 +1,28 @@
 .banner__imagem{
+    /*atalho para defiinir todas as propriedades de background*/
+    background: url(../../img/banner.jpg) no-repeat center/cover;
+    /*
+    background-image: url(../../img/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    */
     /*ele fez um calculo, tirabdo 72px de 100% da view port, o tamanho do cabeçalho estava no figma, e ele colocou um pouco maior*/
-    height: calc(100vh - 72px);
+
     width: 100%;
+}
+
+@media screen and (min-width: 0) {
+    .banner__imagem{ 
+        height: calc(100vh - 51px);
+    
+    }
+
+}
+@media screen and (min-width: 768) {
+    .banner__imagem{ 
+        height: calc(100vh - 72px);
+    
+    }
+
 }

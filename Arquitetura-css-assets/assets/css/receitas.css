@@ -3,6 +3,29 @@
     display: flex;
     /*quebra automaticamente de linha de acordo com o tamanho da pagina.*/
     flex-wrap: wrap;
-    padding: 5rem 0 0 5rem;
     
+    
+}
+@media screen and (min-width: 0) {
+    .receitas{
+        padding: 5rem 0 0 1rem;
+    
+    }
+
+}
+@media screen and (min-width: 768px) {
+    .receitas{
+      padding: 5rem 0 0 2.5rem;
+    
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    .receitas{
+        padding: 5rem 0 0 5rem;
+        
+    
+    }
+
 }

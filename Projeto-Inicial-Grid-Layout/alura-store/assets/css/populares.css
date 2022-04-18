@@ -16,12 +16,13 @@
     "card-imagem"
     "card-corpo";
     grid-template-columns: 100%;
+    /*
     grid-template-rows: 173px auto;
-    /*colocou margin*/
+    /*colocou margin
     margin-right: 1rem;
-    /*o tamanho é dividido para os itens da tabela, e ele calculou para tirar 1rem de cada um*/    
+    /*o tamanho é dividido para os itens da tabela, e ele calculou para tirar 1rem de cada um
     width: calc(20% - 1rem);
-    
+    */    
 }
 
 .populares__card:last-child{

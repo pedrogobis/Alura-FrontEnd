@@ -1,0 +1,21 @@
+.menu{
+
+}
+
+.menu__lista{
+
+}
+
+.menu__item{
+
+}
+
+.menu__link{
+    color: #333333;
+    padding: .5rem 1rem;
+}
+
+/*ele colocou a o menu__link.ativo se essas duas classes estiverem juntas ele fica com o estilo definido.*/
+.menu__link:hover, .menu__link.ativo{
+    border-bottom: 2px solid #0073e6;
+}

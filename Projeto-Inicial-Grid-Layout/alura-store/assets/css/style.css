@@ -2,13 +2,24 @@
     background: #f1f1f1;
     display: grid;  
     font-family: Arial, Helvetica, sans-serif;
+    grid-template-areas:
+    "cabecalho"
+    "conteudo" 
+    "rodape";
+    /*colocou um auto, então fica pra todos*/
+    grid-template-columns: auto;
+    /*aqui como é tres linhas(cabecalho, conteudo, rodape) e apenas um tinha tamanho definido de 50px ele colocou auto para o resto. */
+    grid-template-rows: 50px 100vh auto;
 }
 
 .cabecalho {
+grid-area: cabecalho;
 }
  
 .conteudo {
+grid-area: conteudo;
 }
 
 .rodape {
+grid-area: rodape;
 }

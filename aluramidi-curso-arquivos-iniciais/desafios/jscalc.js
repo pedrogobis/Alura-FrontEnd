@@ -12,5 +12,13 @@ for(let i = 0; i < listaBotao.length; i++){
       // aqui é o seguinte, para manter o valor anterior temos que colocar o inputTel.value, e concatenar com novo valor, que é o botao.value, e o que nao foi comentado é que o botao value é o mesmo valor que o indice dele no html, então por isso bateu.
     inputTel.value= inputTel.value + botao.value;
   }
+  botao.onkeydown = function(evento){
+    if(evento.code === "Enter" || evento.code === "Space"){
+    botao.classList.add('ativa');
+    }
+  }
+  botao.onkeyup = function(){
+    botao.classList.remove('ativa');
+  }
 }
 

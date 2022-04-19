@@ -4,7 +4,7 @@ const listaDeTeclas = document.querySelectorAll('.tecla');
 //funcao toca som
 function tocaSom (seletorAudio) {
     // fracionando para seguranca
-    const elemento = document.queySelector(seletorAudio);     
+    const elemento = document.querySelector(seletorAudio);     
     // js já é inteligente então n tem necessidade de comparar o nulo, apenas deixar o elemento ali ele já vai fazer essa verificacao
     //se elemento existe, seja um valor e nao seja nda vaizio, entao cai como verdadeira
     if(elemento && elemento.localName === 'audio'){
@@ -16,7 +16,7 @@ function tocaSom (seletorAudio) {
         }
 
     }
-}
+
 
 //laco for
 for(let i =0; i < listaDeTeclas.length; i++) { 

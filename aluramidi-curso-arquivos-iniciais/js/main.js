@@ -1,14 +1,19 @@
-const btnPom = document.getElementsByClassName('.tecla_pom');
-/*const btnClap
-const btnTim
-const btnPuff
-const btnSplash
-const btnToim
-const btnPsh
-const btnTic
-const btnTom
-*/
 
-btnPom.addEventListener('click', () => {
-alert('voce clicou pum');
+function tocaSom(idElementoAudio){
+    document.querySelectorAll(idElementoAudio).play()
+}
+
+const listaDeTeclas = document.querySelectorAll('.tecla');
+
+let i = 0;
+
+while(i < listaDeTeclas.length ){
+    listaDeTeclas[i].onclick = tocaSom;
+    i++
+
+}
+/*
+btnPom.EventListener('click', () => {
+    somPom.play()
 })
+*/

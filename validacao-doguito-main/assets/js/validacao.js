@@ -7,9 +7,12 @@ export function valida(input){
     if(input.validity.valid){
         //parentElement para selecionar o pai do elemento, no caso aqui será a div 
         input.parentElement.classList.remove('input-container--invalido')
+        input.parentElement.querySelector('.input-mensagem-erro').innerHTML=''
 
     }else{
         input.parentElement.classList.add('input-container--invalido')
+        input.parentElement.querySelector('.input-mensagem-erro').innerHTML= mostraMensagemDeErro(tipoDeInput, input)
+
     }
 }
 //vamos criar um objeto que vai receber todas as mensagens de erros costumizaveis:
@@ -33,6 +36,12 @@ const  mensagensDeErro = {
      }
 
 }
+const tiposDeErro = [
+    'valueMissing', 
+    'typeMismatch',
+    'patternMismatch',
+    'customError'
+]
 
 // criamos um objeto que vai conter cada tipo de dados dentro do dataatributes, no caso aqui quando tiver um tipo dataNascimento, o input vai chamar o validaDataNascimento, com o valor do input.
 const validadores = {
@@ -48,6 +57,16 @@ dataNascimento.addEventListener('blur', (evento) => {
     validaDataNascimento(evento.target)
 })
 */
+ 
+function mostraMensagemDeErro(tipoDeInput, input){
+    let mensagem = ''
+    tiposDeErro.forEach(erro => {
+        if(input.validity[erro]){
+            mensagem = mensagensDeErro[tipoDeInput][erro]
+        }
+    })
+    return mensagem
+}
 
 function validaDataNascimento(input){
     const dataRecebida = new Date(input.value);

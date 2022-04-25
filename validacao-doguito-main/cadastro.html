@@ -24,17 +24,17 @@
                 <fieldset>
                     <legend class="formulario__legenda">Informações básicas</legend>
                     <div class="input-container ">
-                        <input name="nome" id="nome" class="input" type="text" placeholder="Nome" required>
+                        <input name="nome" id="nome" class="input" type="text" placeholder="Nome" required data-tipo="nome">
                         <label class="input-label" for="nome">Nome</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
                     <div class="input-container">
-                        <input name="email" id="email" class="input" type="email" placeholder="Email" required>
+                        <input name="email" id="email" class="input" type="email" placeholder="Email" required data-tipo="email">
                         <label class="input-label" for="email">Email</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
                     <div class="input-container">
-                        <input name="senha" id="senha" class="input" type="password"  placeholder="Senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[  !@#$%^&*_=+-]).{6,12}$" required title="A senha deve conter de 6 a 8 digitos, sem espaços, uma letra maiuscula, um digito e algum simbulo ">
+                        <input name="senha" id="senha" class="input" type="password"  placeholder="Senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[  !@#$%^&*_=+-]).{6,12}$" required title="A senha deve conter de 6 a 8 digitos, sem espaços, uma letra maiuscula, um digito e algum simbulo " data-tipo="senha">
                         <!--minlength, para exigir quantidade minima de caracteres, regex da aula n deu certo n-->
                         <label class="input-label" for="senha">Senha</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>

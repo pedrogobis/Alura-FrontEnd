@@ -5,10 +5,11 @@ export function valida(input){
         validadores[tipoDeInput](input)
     }
     if(input.validity.valid){
+        //parentElement para selecionar o pai do elemento, no caso aqui será a div 
         input.parentElement.classList.remove('input-container--invalido')
 
     }else{
-        input.parentElement.classList.add('input-container--invalid')
+        input.parentElement.classList.add('input-container--invalido')
     }
 }
 // criamos um objeto que vai conter cada tipo de dados dentro do dataatributes, no caso aqui quando tiver um tipo dataNascimento, o input vai chamar o validaDataNascimento, com o valor do input.

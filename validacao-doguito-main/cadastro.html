@@ -34,7 +34,7 @@
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
                     <div class="input-container">
-                        <input name="senha" id="senha" class="input" type="password"  placeholder="Senha" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{4,8}$" required title="A senha deve conter de 6 a 8 digitos, sem espaços, uma letra maiuscula, um digito e algum simbulo ">
+                        <input name="senha" id="senha" class="input" type="password"  placeholder="Senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[  !@#$%^&*_=+-]).{6,12}$" required title="A senha deve conter de 6 a 8 digitos, sem espaços, uma letra maiuscula, um digito e algum simbulo ">
                         <!--minlength, para exigir quantidade minima de caracteres, regex da aula n deu certo n-->
                         <label class="input-label" for="senha">Senha</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
@@ -80,6 +80,7 @@
             </form>
         </section>
     </main>
+    <script src="assets/js/validacao.js"></script>
 </body>
 </html>
 

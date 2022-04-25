@@ -12,6 +12,28 @@ export function valida(input){
         input.parentElement.classList.add('input-container--invalido')
     }
 }
+//vamos criar um objeto que vai receber todas as mensagens de erros costumizaveis:
+// vamos ter que criar um dataatribute para todos os itens no input do html, para poder pega-los aqui e expecificar
+const  mensagensDeErro = {
+     // para verificar os itens do validity que estamos usando, abrimos o console e digitamos '$0.validity'
+     nome: {
+         valueMissing: 'O campo nome, Não pode estar vazio.'
+     },
+     email: {
+        valueMissing: 'O campo E-mail, Não pode estar vazio.',
+        typeMismatch: 'O E-mail digitado não é valido.'
+     },
+     senha: {
+        valueMissing: 'O campo da senha, Não pode estar vazio.',
+        patternMismatch: 'A senha deve conter de 6 a 8 digitos, sem espaços, uma letra maiuscula, um digito e algum simbulo'
+     },
+     dataNascimento:{
+        valueMissing: 'O campo da data de nascimento, Não pode estar vazio.',
+        customError: 'Você deve ser maior que 18 anos para se cadastrar'
+     }
+
+}
+
 // criamos um objeto que vai conter cada tipo de dados dentro do dataatributes, no caso aqui quando tiver um tipo dataNascimento, o input vai chamar o validaDataNascimento, com o valor do input.
 const validadores = {
      dataNascimento: input => validaDataNascimento(input)

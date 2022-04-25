@@ -36,6 +36,7 @@ const  mensagensDeErro = {
      }
 
 }
+// vetor com cada tipo de erro.
 const tiposDeErro = [
     'valueMissing', 
     'typeMismatch',
@@ -57,7 +58,7 @@ dataNascimento.addEventListener('blur', (evento) => {
     validaDataNascimento(evento.target)
 })
 */
- 
+ // essa funcao vai pegar os parametros tipo de erro e input, para cada item em tipos de erro, se input validatiy erro inserido vai mudar a mesnagem de erro com o tipo de input e erro.
 function mostraMensagemDeErro(tipoDeInput, input){
     let mensagem = ''
     tiposDeErro.forEach(erro => {

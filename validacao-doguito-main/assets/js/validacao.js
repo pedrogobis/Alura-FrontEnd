@@ -33,7 +33,12 @@ const  mensagensDeErro = {
      dataNascimento:{
         valueMissing: 'O campo da data de nascimento, Não pode estar vazio.',
         customError: 'Você deve ser maior que 18 anos para se cadastrar'
+     },
+     cpf: {
+        valueMissing: 'O campo de CPF, Não pode estar vazio.',
+        customError: 'CPF digitado não é valido'
      }
+
 
 }
 // vetor com cada tipo de erro.
@@ -46,7 +51,8 @@ const tiposDeErro = [
 
 // criamos um objeto que vai conter cada tipo de dados dentro do dataatributes, no caso aqui quando tiver um tipo dataNascimento, o input vai chamar o validaDataNascimento, com o valor do input.
 const validadores = {
-     dataNascimento: input => validaDataNascimento(input)
+     dataNascimento: input => validaDataNascimento(input),
+     cpf: input => validaCPF(input)
 }
 /*
 Refatorando o codigo, faremos uma funcao para usar todos os dados de maneira generica.
@@ -86,3 +92,87 @@ function maiorQue18(data){
 
     return dataMais18 <= dataatual;
 }
+
+function validaCPF(input){
+    //vamos usar uma regex, ela vai pegar tudo que não for um digito e vamos trocar por
+    const cpfFormatado = input.value.replace(/\D/g, '')
+    let mensagem = ''
+     //com o ! ele inverte o vdd pra falso e falso pra verdadeiro. e bate a logica
+    if(!checaCPFRepetido(cpfFormatado)|| !checaEstruturaCPF(cpfFormatado) ){
+        mensagem = ' O CPF digitado não é valido'
+    }
+
+    input.setCustomValidity(mensagem)
+}
+
+function checaCPFRepetido(cpf){
+    const valoresRepetidos =[
+        '00000000000',
+        '11111111111',
+        '22222222222',
+        '33333333333',
+        '44444444444',
+        '55555555555',
+        '66666666666',
+        '77777777777',
+        '88888888888',
+        '99999999999',
+       ]
+       let cpfValido = true
+
+       valoresRepetidos.forEach(valor =>{
+           if(valor == cpf){
+               cpfValido = false;
+           }
+       })
+
+       return cpfValido
+}
+
+function checaEstruturaCPF(cpf){
+    const multiplicador = 10
+    return checaDigitoVerificador(cpf, multiplicador)
+
+}
+
+function checaDigitoVerificador(cpf, multiplicador){
+    if(multiplicador >=12  ){
+        return true
+    }
+    // para n alterar o valor real do multiplicador
+    let multiplicadorInicial = multiplicador
+    let soma = 0 // sei la
+    const cpfSemDigitos = cpf.substr(0,multiplicador-1).split('') // corta a string da posicao 0 a posicao multiplicador -1 e retonra um vetor separado por espaço, cada chave do vetor (10* 1)
+    const digitoVerificador = cpf.charAt(multiplicador-1)// charAt posicao especifica 
+    for(let contador = 0; multiplicadorInicial > 1; multiplicadorInicial--){
+        soma = soma + cpfSemDigitos[contador] * multiplicador
+        contador++
+    }
+    if(digitoVerificador == confirmaDigito(soma)){
+        return checaDigitoVerificador(cpf, multiplicador + 1 )
+    }
+    return false
+}
+
+function confirmaDigito(soma){
+    return 11 - ( soma % 11)
+}
+
+
+/*
+Vamos verificar o cpf se é valido fazendo a conta
+o calculo de cpf valido é o seguinte:
+
+ex 123 456 789 01
+
+-- para verficar o primeiro digito verificador
+a soma vai funcionar assim =
+(10* 1) + (9 *2) + (8*3) +... (2*9)
+
+o digito verficador é igual a 11-(soma % 11) // é o resto da soma divido por 11 menos 11
+-- para verificar o segundo numero
+a multiplicacao começa por 11
+(11*1) + (10*2) + .... (3*9)
+
+o segundo digito verficador é igual a 11-(soma % 11)
+*/

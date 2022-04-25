@@ -37,8 +37,21 @@ const  mensagensDeErro = {
      cpf: {
         valueMissing: 'O campo de CPF, Não pode estar vazio.',
         customError: 'CPF digitado não é valido'
+     },
+     cep:{
+         valueMissing: 'O campo de CEP não pode estar vazio.',
+         patternMismatch: 'O CEP digitado não é valido',
+        customError: 'Não foi possivel encontrar o cep',
+     },
+     logradouro:{
+        valueMissing: 'O campo do logradouro não pode estar vazio.',
+     },
+     cidade:{
+        valueMissing: 'O campo da cidade não pode estar vazio.',
+     },
+     estado:{
+        valueMissing: 'O campo do estado não pode estar vazio.',
      }
-
 
 }
 // vetor com cada tipo de erro.
@@ -49,10 +62,13 @@ const tiposDeErro = [
     'customError'
 ]
 
-// criamos um objeto que vai conter cada tipo de dados dentro do dataatributes, no caso aqui quando tiver um tipo dataNascimento, o input vai chamar o validaDataNascimento, com o valor do input.
+/* criamos um objeto que vai conter cada tipo de dados dentro do dataatributes, no caso
+ aqui quando tiver um tipo dataNascimento, o input vai
+ chamar o validaDataNascimento, com o valor do input.*/
 const validadores = {
      dataNascimento: input => validaDataNascimento(input),
-     cpf: input => validaCPF(input)
+     cpf: input => validaCPF(input),
+     cep: input => recuperarCEP(input)
 }
 /*
 Refatorando o codigo, faremos uma funcao para usar todos os dados de maneira generica.
@@ -64,7 +80,7 @@ dataNascimento.addEventListener('blur', (evento) => {
     validaDataNascimento(evento.target)
 })
 */
- // essa funcao vai pegar os parametros tipo de erro e input, para cada item em tipos de erro, se input validatiy erro inserido vai mudar a mesnagem de erro com o tipo de input e erro.
+ /* essa funcao vai pegar os parametros tipo de erro e input, para cada item em tipos de erro, se input validatiy erro inserido vai mudar a mesnagem de erro com o tipo de input e erro.*/
 function mostraMensagemDeErro(tipoDeInput, input){
     let mensagem = ''
     tiposDeErro.forEach(erro => {
@@ -160,6 +176,7 @@ function confirmaDigito(soma){
 
 
 /*
+
 Vamos verificar o cpf se é valido fazendo a conta
 o calculo de cpf valido é o seguinte:
 
@@ -176,3 +193,41 @@ a multiplicacao começa por 11
 
 o segundo digito verficador é igual a 11-(soma % 11)
 */
+
+function recuperarCEP(input){
+    const cep = input.value.replace(/\D/g, '') // tratou o cep, e tirou quaisquer coisas que não fosse um digito numerico.
+    const url = `https://viacep.com.br/ws/${cep}/json/` // link da api
+    const options = { // objeto que vai ser enviado para api, metodo pegar, cors api, headers
+        method: 'GET', 
+        mode: 'cors',
+        headers: {
+            'content-type': 'application/json;charset=utf-8'
+        }
+    }
+    if(!input.validity.patternMismatch && !input.validity.valueMissing){
+        fetch(url, options).then(
+            response => response.json()
+        ).then(
+            data => {
+                if(data.erro){
+                    input.setCustomValidity('Não foi possivel encontrar o cep')
+                    return
+                }
+                input.setCustomValidity('')
+                preencheCamposComCep(data)
+                return // mata o fatch
+            }
+        )
+    }
+
+}
+
+function preencheCamposComCep(data){
+    const logradouro = document.querySelector('[data-tipo="logradouro"]') // procurar por atributos, usamos o colchetes
+    const cidade = document.querySelector('[data-tipo="cidade"]') // procurar por atributos, usamos o colchetes
+    const estado = document.querySelector('[data-tipo="estado"]') // procurar por atributos, usamos o colchetes
+    
+    logradouro.value = data.logradouro
+    cidade.value = data.localidade
+    estado.value = data.uf
+}

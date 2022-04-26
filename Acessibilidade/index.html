@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 </head>
 <body>
-
+  <div id="conteudoForaDialog">
   <header class="cabecalho container">
     <a href="#" class="cabecalho-logo">
       <h1>
@@ -147,25 +147,25 @@
         </h1>
 
         <div class="secaoPlanos-plano secaoPlanos-plano--start">
-          <h1 class="secaoPlanos-plano-titulo">Start</h1>
-          <h2 class="secaoPlanos-plano-preco">
+          <h1 class="secaoPlanos-plano-titulo"><span class="escondeVisualmente">Plano</span>Start</h1>
+          <span class="secaoPlanos-plano-preco">
             R$ 500
-          </h2>
+          </span>
           <ul class="secaoPlanos-plano-itens">
             <li>5 manutenções mensais</li>
             <li>App SEO</li>
             <li>1 sistema operacional</li>
           </ul>
           <a href="#" class="btnPadrao secaoPlanos-plano-btn">
-            Assinar plano
+            Assinar plano <span class="escondeVisualmente">Start por R$500,00</span>
           </a>
         </div>
 
         <div class="secaoPlanos-plano secaoPlanos-plano--ultra">
-          <h1 class="secaoPlanos-plano-titulo">Ultra</h1>
-          <h2 class="secaoPlanos-plano-preco">
+          <h1 class="secaoPlanos-plano-titulo"><span class="escondeVisualmente">Plano</span> Ultra</h1>
+          <span class="secaoPlanos-plano-preco">
             R$ 1500
-          </h2>
+          </span>
           <ul class="secaoPlanos-plano-itens">
             <li>20 manutenções mensais</li>
             <li>App SEO</li>
@@ -173,22 +173,22 @@
             <li>24h de atendimento</li>
           </ul>
           <a href="#" class="btnPadrao secaoPlanos-plano-btn">
-            Assinar plano
+            Assinar plano <span class="escondeVisualmente">Ultra por R$1500,00</span>
           </a>
         </div>
 
         <div class="secaoPlanos-plano secaoPlanos-plano--mega">
-          <h1 class="secaoPlanos-plano-titulo">Mega</h1>
-          <h2 class="secaoPlanos-plano-preco">
+          <h1 class="secaoPlanos-plano-titulo"><span class="escondeVisualmente">Plano</span> Mega</h1>
+          <span class="secaoPlanos-plano-preco">
             R$ 1000
-          </h2>
+          </span>
           <ul class="secaoPlanos-plano-itens">
             <li>10 manutenções mensais</li>
             <li>App SEO</li>
             <li>2 sistemas operacionais</li>
           </ul>
           <a href="#" class="btnPadrao secaoPlanos-plano-btn">
-            Assinar plano
+            Assinar plano <span class="escondeVisualmente">Mega por R$1000,00</span>
           </a>
         </div>
 
@@ -299,22 +299,22 @@
         </button>
       </div>
 
-      <div class="dialogNewsletter" id="dialogNewsletter">
+      <div class="dialogNewsletter" id="dialogNewsletter" role="dialog" aria-labelledby="tituloDialog">
         <div class="dialogNewsletter-body">
 
-          <h1 class="dialogNewsletter-titulo">News sem spam</h1>
+          <h1 class="dialogNewsletter-titulo" id="tituloDialog">News sem spam</h1>
           <h2 class="dialogNewsletter-texto">
             Assine nossa newsletter para receber notícias técnicas sem spam!
           </h2>
           <form class="dialogNewsletter-form">
-            <label class="dialogNewsletter-label">
+            <label class="dialogNewsletter-label" for="emailNewsletter">
               Email:
             </label>
-            <input type="text" class="dialogNewsletter-campo" placeholder="Digite seu e-mail...">
-            <button class="dialogNewsletter-btn">
+            <input type="email" class="dialogNewsletter-campo" placeholder="Digite seu e-mail..." id="emailNewsletter">
+            <button class="dialogNewsletter-btn" type="submit">
               Assinar newsletter
             </button>
-            <button class="dialogNewsletter-fechar">
+            <button class="dialogNewsletter-fechar" type="button">
               X
             </button>
           </form>
@@ -324,7 +324,7 @@
 
     </section> <!--fim .secaoDestaques-->
 
-    <section class="secaoContato">
+    <section class="secaoContato" inert="true">
       <div class="container">
         <h1 class="tituloPadrao">
           CONTATO
@@ -467,7 +467,11 @@
     </div>
 
   </footer>
+  </div>
+  <div class="dialogNewsletter">
+  </div>
   <script src="js/carousel.js"></script>
+  <script src="js/inert.js"></script>
   <script src="js/dialog.js"></script>
 </body>
 </html>

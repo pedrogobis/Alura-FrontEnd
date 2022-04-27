@@ -1,13 +1,3 @@
-// Criando indicador de slide atual.
-var indicadorSlideAtual = document.createElement('span'); // vamos criar um elemento.
-indicadorSlideAtual.classList.add('escondeVisualmente');
-indicadorSlideAtual.id ='escondeVisualmente';
-indicadorSlideAtual.textContent = '(Slide atual)';
-
-
-// Noticia display
-document.querySelector('#new0').style.display = 'block'
-
 // Variaveis
 var btns = document.querySelectorAll('.listaDeArtigos-slider-item');
 var noticias = document.querySelectorAll('.listaDeArtigos-item');
@@ -16,6 +6,12 @@ var new1 = document.querySelector('#new1');
 var new2 = document.querySelector('#new2');
 
 
+new0.style.display = 'block'
+
+// Criando indicador de slide atual.
+var indicadorSlideAtual = document.createElement('span'); // vamos criar um elemento.
+indicadorSlideAtual.classList.add('escondeVisualmente');
+indicadorSlideAtual.textContent = '(Slide atual)';
 
 
 
@@ -36,13 +32,14 @@ btns.forEach(function(btn) {
 
 
 
-    }.bind(this)// bind faz referencia ao this do botao e nao ao da noticia., meio que ele ignora o item atual e se responde a classe pai.
-    );
+    }.bind(this));
+    // bind faz referencia ao this do botao e nao ao da noticia., meio que ele ignora o item atual e se responde a classe pai.
 
 
-  
-    document.querySelector('.listaDeArtigos-slider-item .escondeVisualmente').remove(); // remove dentro de listadeartigoslideitem qualquer um que tenha a classe esconde visualmente. otima forma pra não dar erro na hora de excluir uma classe no js.
-    this.append(indicadorSlideAtual)
+    /*remove dentro de listadeartigoslideitem qualquer um que tenha a classe esconde visualmente. otima forma pra não dar erro na hora de excluir uma classe no js.*/
+    document.querySelector('.listaDeArtigos-slider-item .escondeVisualmente').remove();
+    this.append(indicadorSlideAtual);
+    
 
     // Remove classe 'ativo' dos outros botoes
     btns.forEach(function(btnRemoveClass) {

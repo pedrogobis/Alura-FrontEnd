@@ -41,7 +41,7 @@ btns.forEach(function(btn) {
 
 
   
-    document.querySelector('listaDeArtigos-slider-item.escondeVisualmente').remove() // remove dentro de listadeartigoslideitem qualquer um que tenha a classe esconde visualmente. otima forma pra não dar erro na hora de excluir uma classe no js.
+    document.querySelector('.listaDeArtigos-slider-item .escondeVisualmente').remove(); // remove dentro de listadeartigoslideitem qualquer um que tenha a classe esconde visualmente. otima forma pra não dar erro na hora de excluir uma classe no js.
     this.append(indicadorSlideAtual)
 
     // Remove classe 'ativo' dos outros botoes

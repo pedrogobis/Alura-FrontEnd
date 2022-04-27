@@ -5,6 +5,10 @@
   position: relative;
 }
 
+.contatoCampo-label{
+  position: relative;
+}
+
 .contatoCampo-label:before {
   content:'';
   vertical-align: middle;
@@ -18,12 +22,35 @@
   color: transparent;
   line-height: 1;
   transition: .2s ease-in;
+  box-sizing: border-box;
+}
+
+.contatoCampo-checkbox:hover + .contatoCampo-label:before, .contatoCampo-checkbox:focus + .contatoCampo-label:before {
+  border: 1px solid #333;
+  
 }
 
 .contatoCampo-checkbox:checked + .contatoCampo-label:before {
-  content: 'x';
+  content: '';
   color: #fff;
   background-image: radial-gradient(circle, #2DA4E7, #2F80ED);
+  border-color:transparent;
+  line-height:.8 ;
+
+}
+.contatoCampo-checkbox:checked + .contatoCampo-label:after::after{
+  background-color: #fff;
+  border-bottom: 2px solid #000;
+  border-left: 2px solid #000;
+  content: '';
+  display: block;
+  height: 5px;
+  left: px;
+  position: absolute;
+  top: 5px;
+  transform: rotate(-45deg);
+  width: 10px;
+  z-index: -2;
 }
 
 .contatoCampo-checkbox {

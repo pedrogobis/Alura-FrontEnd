@@ -20,6 +20,8 @@
   line-height: 1.6;
   text-align: center;
   margin: 0 auto;
+  display: block;
+  
 }
 
 .secaoContato-form-cta {

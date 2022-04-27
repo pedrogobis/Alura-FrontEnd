@@ -314,11 +314,11 @@
           </h2>
 
           <form class="secaoContato-form">
-
-            <p class="secaoContato-form-legend">
+            <fieldset>
+            <legend class="secaoContato-form-legend">
               Oi, tudo bem? Fale com a gente!
               Preencha seus dados e sua mensagem:
-            </p>
+            </legend>
 
             <div class="contatoCampo contatoCampo--sucesso">
               <label for="nome">Nome: </label>
@@ -334,39 +334,39 @@
             </div>
 
             <div class="contatoCampo contatoCampo--erro">
-              <label>Telefone: </label>
-              <input type="text" class="contatoCampo--validouErro" placeholder="(11) 5571-2751">
+              <label for="telefone">Telefone: </label>
+              <input id="telefone" type="text" class="contatoCampo--validouErro" placeholder="(11) 5571-2751">
               <span class="contatoCampo-msg contatoCampo-msg--erro">Faltou o DDD</span>
             </div>     
 
             <div class="contatoCampo">
-              <label>CEP: </label>
-              <input type="text" maxlength="8" placeholder="Exemplo: 04101-300" required>
+              <label for="cep">CEP: </label>
+              <input id="cep" type="text" maxlength="8" placeholder="Exemplo: 04101-300" required>
             </div>
 
             <div class="contatoCampo">
-              <label>Endereço: </label>
-              <input type="text" class="contatoCampo-campoDesabilitado" readonly value="Rua Vergueiro">
+              <label for="endereco">Endereço: </label>
+              <input id="endereco" type="text" class="contatoCampo-campoDesabilitado" readonly value="Rua Vergueiro">
             </div>   
 
             <div class="contatoCampo">
-              <label>Bairro: </label>
-              <input type="text" class="contatoCampo-campoDesabilitado" readonly value="Vila Mariana">
+              <label for="bairro">Bairro: </label>
+              <input id="bairro" type="text" class="contatoCampo-campoDesabilitado" readonly value="Vila Mariana">
             </div>   
 
             <div class="contatoCampo">
-              <label>Cidade: </label>
-              <input type="text" class="contatoCampo-campoDesabilitado" readonly value="São Paulo">
+              <label for="cidade" >Cidade: </label>
+              <input id="cidade" type="text" class="contatoCampo-campoDesabilitado" readonly value="São Paulo">
             </div>   
 
             <div class="contatoCampo">
-              <label>Estado: </label>
-              <input type="text" class="contatoCampo-campoDesabilitado" readonly value="SP">
+              <label for="estado">Estado: </label>
+              <input id="estado" type="text" class="contatoCampo-campoDesabilitado" readonly value="SP">
             </div>   
 
             <div class="contatoCampo">
-              <label>Mensagem: </label>
-              <textarea name="" cols="30" rows="10" required></textarea>
+              <label for="mensagem">Mensagem: </label>
+              <textarea id="mensagem" name="" cols="30" rows="10" required></textarea>
             </div>
 
             <div class="contatoCampo">
@@ -382,7 +382,7 @@
                 Verifique os erros acima
               </span>
             </div>
-
+          </fieldset>
           </form>
         </div> <!--fim .container da .secaoContato-->
 
@@ -479,6 +479,7 @@
     <script src="js/carousel.js"></script>
     <script src="js/inert.js"></script>
     <script src="js/dialog.js"></script>
+    <script src="js/validacaocep.js"></script>
   </body>
 </html>
 

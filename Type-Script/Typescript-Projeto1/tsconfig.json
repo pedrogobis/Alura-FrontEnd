@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "outDir": "dist/js", // local dos arquivos serão convertidos 
+        "target": "ES6",
+    },
+    "include": ["app/**/*"]//local dos arquivos base
+
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato.</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/stylepro.css">
+    <link rel="shortcut icon" href="assets/pictures/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="caixa">
+            <h1><img src="assets/pictures/logo.png" alt="logo barbearia alura"></h1>
+            <nav>
+                <a href="Index.html">Home</a>
+                <a href="Produtos.html">Produtos</a>
+                <a href="contatos.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="padrao">
+            <form action="contato">
+                <!--Sempre usamos uma label para colocar o texto na frente, e no for colocamos o mesmo nome do id -->
+                
+                    <label for="nomeesobrenome">Nome e Sobrenome:</label>
+                    <input type="text" name="nome" id="nomeesobrenome" class="input-padrao" required >
+                
+
+                
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
+                
+
+                
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" name="telefone" id="telefone" class="input-padrao" required placeholder="(99) 99999-9999">
+
+                    <label for="msg">Mensagem:</label>
+                    <textarea name="msg" id="msg" cols="70" rows="10" class="input-padrao" required></textarea>
+                 <fieldset>
+                     <legend>Como prefere o nosso contato?</legend>
+                     <label for="emailradio"><input type="radio" name="contato" id="emailradio">E-Mail.</label>
+                     
+                     <label for="telefoneradio"><input type="radio" name="contato" id="telefoneradio">Telefone</label>
+                     
+                     <label for="zapradio"><input type="radio" name="contato" id="zapradio" checked>Whatsapp</label>
+                     
+                 </fieldset>
+                 <fieldset>
+                     <legend id="horarioatendido">Qual horário prefere ser atendido?</legend>
+                        <select name="" id="">
+                            <option value="">Manhã</option>
+                            <option value="">Tarde</option>
+                            <option value="">Noite</option>
+                        </select>
+                </fieldset>
+                 <label for="novidadesemail"><input class="checkbox" type="checkbox" name="contato" id="novidadesemail" checked> Gostaria de receber nossas novidades por email?</label>
+
+                <input type="submit" value="Enviar Formulario" class="enviar">
+            </form>
+
+
+        </section>
+        <section class="padrao">
+            <h2>Estamos abertos:</h2>
+            <table>
+                <caption>Horario de funcionamento</caption>
+                <thead>
+                    <th>Dia</th>
+                    <th>Horario</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Segunda
+                        </td>
+                        <td>
+                            8hr ~ 20hrs
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Quarta
+                        </td>
+                        <td>
+                            8hr ~ 20hrs
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Sexta
+                        </td>
+                        <td>
+                            8hr ~ 20hrs
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            
+        </section>
+    </main>
+    <footer>
+        <img id="logoroda" src="assets/pictures/logo-branco.png" alt="Logo">
+        <p class="direitos"> &#169; Barbearia Alura - Todos os direitos reservados
+
+        </p>
+    </footer>
+</body>
+</html>

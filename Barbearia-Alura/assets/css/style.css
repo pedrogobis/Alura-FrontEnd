@@ -1,0 +1,64 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#banner{
+    width: 100%;
+}
+
+.principal{
+    background-color: rgb(182, 177, 177);
+    padding: 30px;
+    font-size: 20px;
+    
+}
+
+
+
+.titcentra{
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+p{
+    text-align: center;
+}
+
+#missao {
+	font-size: 20px
+}
+
+em strong{
+    color: red;
+}
+
+.beneficios{
+    background-color: white;
+    padding: 20px;
+}
+
+.beneficios > h3{
+    font-weight: bold;
+    padding: 20px;
+}
+
+ul{
+    /*
+    Display inline-block para que fique na mesma linha do ul.
+    Vertical aling para alinhar o display a linha de cima e não de baixo
+    width = largura 20% da pagina 
+    e espaçamento para diretia de 15%
+    */
+    display: inline-block; 
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+.itens{
+    font-style: italic;
+}
+
+.imgbarb{
+    width: 50%;
+}

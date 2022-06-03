@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+
+header {
+	background: #BBBBBB;
+	padding: 20px 0;
+}
+
+.caixa {
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+}
+
+nav {
+	position: absolute;
+	top: 110px;
+	right: 0;
+	
+}
+
+
+nav a {
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+	padding: 10px;
+	
+}
+
+nav a:hover {
+	color: #C78C19;
+	text-decoration: none;
+}
+
+.produtos {
+	width: 940px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+.produtos li {
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	vertical-align: top;
+	margin: 0 1.5%;
+	padding: 30px 20px;
+	box-sizing: border-box;
+	border: 2px solid #000000;
+	border-radius: 10px;
+}
+
+.produtos li:hover {
+	border-color: #C78C19;
+}
+
+.produtos li:active {
+	border-color: #088C19;	
+}
+
+.produtos li:hover h2 {
+	font-size: 34px;
+}
+
+.produtos h2 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.descricao {
+	font-size: 18px;
+}
+
+.preco {
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+footer {
+	text-align: center;
+	background: url('../pictures/bg.jpg');
+	padding: 40px 0;
+}
+
+footer p {
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px 0 0;
+}
+
+main {
+	width: 940px;
+	margin: 0 auto;
+}
+form{
+    margin: 40px 0px;
+    margin-left: 10px;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin-bottom: 0 0 10px;
+}
+
+.input-padrao{
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 30px;
+    border-radius: 10px;
+    border:none;
+    background-color: orange;
+    color:white;
+    font-weight: bold;
+    font-size: 18px;
+    /*ele colocou a transição dentro do enviar e colocou a caracteristica background
+    agora pra todas as caracteristicas */
+    transition: 1s all;
+    cursor: pointer;
+    margin-left: 35px;
+}
+
+.enviar:hover{
+    background: darkorange;
+    /*Tag transform, vai mudar os elementos, tamanho do elemento
+    ele usou transform com a tag scale, dentro da scale ele usou o 1 . 2porcento calculo proporcional 1 . 2 
+
+    transform: rotate(70deg) vai girar a o item em deg
+
+    // colocar junto para ter uma ordem
+    transform: rotate(30deg) scale(1.2);
+    */
+    
+    transform: scale(1.2);
+    
+    
+}
+
+table , td, th, tr{
+    margin: 20px 0px 40px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+    
+}
+
+/* css da página inicial */
+.banner {
+	width:100%;
+}
+
+.tituloprincipal {
+	text-align: center;
+	font-size: 2em;
+	margin: 0 0 1em;
+	clear: left;
+}
+
+.principal p {
+	margin: 0 0 1em;
+}
+
+.principal strong {
+	font-weight: bold;
+}
+
+.principal em {
+	font-style: italic;
+}
+
+.utensilios {
+	width: 120px;
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+
+.utencilios{
+    /*
+    width: 120px;
+    /*precisamos posicionar a img corretamente, e com o texto ao lado, porém com o que vimos até agora não temos como fazer isso.
+    apartir de agora vamos usar o float, ele vai fazer a imagem flutuar mas a sombra ainda vai ter m local na caixa, então o texto vai se adaptar a ela.
+    float: left;
+    */
+    width: 120px;
+	float: left;
+	margin: 0 20px 20px 0;
+
+}
+
+.beneficios{
+    background-color: white;
+    padding: 20px;
+}
+
+.beneficios > h3{
+    font-weight: bold;
+    padding: 20px;
+}
+
+ul{
+    /*
+    Display inline-block para que fique na mesma linha do ul.
+    Vertical aling para alinhar o display a linha de cima e não de baixo
+    width = largura 20% da pagina 
+    e espaçamento para diretia de 15%
+    */
+    display: inline-block; 
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+.itens{
+    font-style: italic;
+    margin-left: 10px;
+}
+
+.imgbarb{
+    width: 60%;
+}
+
+.mapa{
+    padding: 3em 0;
+}
+
+.mapa p {
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.video{
+    /*mantem o tamanho do iframe do video*/
+    width: 560px;
+    /*1em pra cima e baixo e para os lados automatico*/
+    margin: 1em auto;
+}

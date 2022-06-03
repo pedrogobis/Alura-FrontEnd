@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    font-family: 'Montserrat';
+    font-size: 15px;
+}
+
+body{
+    font-family: 'Montserrat';
+}
+
+/*CABEÇALHO E MENU*/
+
+header{
+    background-color: #bbbbbb;
+    padding: 20px 0;
+}
+
+.caixa{
+    /*Tamanho padrão para dar certo em todos os monitores*/
+    width: 940px;
+    position: relative; /*para conseguir ajustar o menu*/
+    margin: 0 auto; /*Margin 0 auto para ajustar o menu dentro da caixa*/
+}
+
+nav{
+    /*
+    Position absolute para ficar fora de qualquer caixa
+    top e right para mover
+    display inlnine block
+    */
+    position: absolute; 
+    top: 110px;
+    right: 0;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+nav > a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: bold;
+    color: black ;
+    margin: 0 0 0 15px;
+}
+
+nav > a:hover{
+    color: #c78c19;
+    text-decoration: none;
+}
+
+/*FIM DO CABECALHO E MENU*/
+
+main{
+    /*Vamos retirar toda configuração padrao do main, e jogar paras classes principais, para poder brincar com a largura de cada bloco.*/
+}
+
+/*CONFIGURACOES DA PAGINA PRODUTO*/
+
+.produtos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.servicoscorte{
+    display: inline-block;
+    text-align: center;
+    /*Deu a porcentagem de 30% pra cada item*/
+    width: 30%; 
+    /*alinhando pela linha de cima*/
+    vertical-align: top;
+    /*
+    Ideal colocar cor no fundo pra poder fazer as alterções corretas nas caixas.
+    background-color: #bbbbbb;*/
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    /*com isso os 30% definido com o width, são padrao e tudo fica dentro dessa porcentagem*/
+    box-sizing: border-box;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.produtos li:hover{
+   color: #c78c19;
+   
+}
+
+.produtos li:hover h2{
+    font-size: 34px;
+ }
+
+.produtos > li:active{
+    border-color: green;
+}
+
+.produtos h2{
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.descricao{
+      
+    font-size: 18px;
+}
+
+.preco{
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+/*FIM DAS CONFIGURACOES DE PRODUTOS*/
+
+/*FORMULARIO DA PAG CONTATOS*/
+
+.padrao{
+    width: 940px;    
+    margin: 0 auto;
+    padding-bottom: 15px;
+    
+}
+
+form{
+    margin: 40px 0px;
+    margin-left: 10px;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin-bottom: 0 0 10px;
+    padding-bottom: 10px;
+
+}
+
+.horarioatendido{
+    padding-bottom: 15px;
+}
+
+
+
+.input-padrao{
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 30px;
+    border-radius: 10px;
+    border:none;
+    background-color: orange;
+    color:white;
+    font-weight: bold;
+    font-size: 18px;
+    /*ele colocou a transição dentro do enviar e colocou a caracteristica background
+    agora pra todas as caracteristicas */
+    transition: 1s all;
+    cursor: pointer;
+    margin-left: 35px;
+}
+
+.enviar:hover{
+    background: darkorange;
+    /*Tag transform, vai mudar os elementos, tamanho do elemento
+    ele usou transform com a tag scale, dentro da scale ele usou o 1 . 2porcento calculo proporcional 1 . 2 
+
+    transform: rotate(70deg) vai girar a o item em deg
+
+    // colocar junto para ter uma ordem
+    transform: rotate(30deg) scale(1.2);
+    */
+    
+    transform: scale(1.2);
+    
+    
+}
+
+h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    padding-bottom: 15px;
+}
+
+table{
+    margin: auto;
+    border: 1px solid black;
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+td, th, tr{
+    margin: 20px 0px 40px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+    
+}
+
+/*FIM DA CONFIGURACAO DE CONTATOS*/
+
+/* ESTILO RODAPÉ*/
+
+footer{
+    background-image: url('../pictures/bg.jpg');
+    padding: 40px 0;
+    text-align: center;
+   
+}
+
+.direitos{
+    color: white;
+    font-size: 13px;
+    margin: 20px 0 0;
+}
+
+/* FIM DO RODA PE*/
+
+/*css da pagina inicial*/
+
+.banner{
+    width: 100%;
+}
+
+.principal{
+    padding: 3em 0;
+    background: #fefefe;
+    width: 940px;    
+    margin: 0 auto;
+}
+
+.tituloprincipal{
+    text-align: center;
+	font-size: 2em;
+	margin: 0 0 1em;
+	clear: left;
+    /*
+    text-align: center;
+    /*2x o tamanho da fonte base
+    margin: 0 0 1em ;
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    clear: left;
+    /*aparente mente meu codigo por algum motivo deu certo, diferente do video, se eu precisar ativar a tag que ele colocou futuramente é essa [clear: left;] */
+}
+
+/*pegando a primeira letra de uma classe, usando a pseudoclasse.*/
+.tituloprincipal::first-letter{
+    font-weight: bold;
+}
+/*
+/*Inserindo conteudo não manipulavel pela html na pagina html
+.tituloprincipal::before{
+    content: "[";
+}
+.tituloprincipal::after{
+    content: "]";
+}
+*/
+.principal p{
+    margin: 0 0 1em;
+}
+
+.principal strong{
+    color: red;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+#missao {
+	font-size: 20px;
+    font-style: italic;
+}
+
+.utensilios{
+    /*
+    width: 120px;
+    /*precisamos posicionar a img corretamente, e com o texto ao lado, porém com o que vimos até agora não temos como fazer isso.
+    apartir de agora vamos usar o float, ele vai fazer a imagem flutuar mas a sombra ainda vai ter m local na caixa, então o texto vai se adaptar a ela.
+    float: left;
+    */
+    width: 120px;
+	float: left;
+	margin: 0 20px 20px 0;
+
+}
+
+.mapa{
+    padding: 3em 0;
+    background: linear-gradient(#fefefe, #888888);
+ 
+}
+
+.mapa-conteudo{
+    /*fizemos isso para o mapa não ficar gigante.*/
+    width: 940px;    
+    margin: 0 auto;
+}
+
+.mapa p {
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.video{
+    /*mantem o tamanho do iframe do video*/
+    width: 560px;
+    /*1em pra cima e baixo e para os lados automatico*/
+    margin: 2em auto;
+}
+
+.beneficios{
+    background-color: #888888;
+    padding: 3em 0;
+}
+
+
+.conteudo-beneficios{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios{
+    width: 40%;
+    display: inline-block;
+    /*Quando usamos inline block, os elementos no html precisam estar colados, nao contendo nenhum espaço entre eles.*/
+    /*alinhando pelo topo*/
+    vertical-align: top;
+}
+.itens{
+    line-height: 1.5em;
+    font-style: italic;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+/*Usando uma pseudo classe para fazer uma 'sub-classe' para primeiro item
+.itens:first-child{
+    font-weight: bold;
+}
+*/
+/*Temos também a opção de usar a nth-child(numero do item) para selecionar qualquer item .
+podemos usar o 1n ou 2n para pegar os impares ou os pares*/
+
+/*ultimo item
+.itens:last-child{
+
+}
+*/
+
+.itens::before{
+    content: "★";
+}
+
+.imgbarb{
+    width: 60%;
+    /*opacidade da img. do 0 até o 1
+    podemos usar opacidade em tudo.*/
+    opacity: 1;
+    transition: 300ms;
+    /*podemos adicionar mais que uma sombra, adicionando virgula apos terminar de configurara  primeira
+    
+    ** para criar uma borda interna usamos o inset + as configuracoes.
+    */
+    box-shadow: 10px 10px 10px;
+}
+
+ .imgbarb:hover{
+     opacity: 0.3;
+ }
+
+ @media screen and (max-width: 480px){
+     /*aqui vamos mudar tudos os elementos para uma tela de até 480px*/
+     /*mas só os itens que estão quebrando.*/
+     /*Ideal é abrir o modo inspecionar no google, ver item por item que está quebrado e ir adicionando o estilo padrão, em alguns casos vai ser preciso alterar algumas coisas na html, como por exemplo nesse caso o video, só ele está quebrando o estilo por conta que ele tem um tamanho definido no html, então vamos colocar o tamanho em porcentagem, assim vai se adaptar ao display.*/
+     .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video, .padrao, .enviar, .produtos, .servicoscorte{
+         /*esta colocando um tamanho automatico, vai quebrar algumas coisas, mas vamos corrigir depois*/
+         width: auto;
+     }
+     /*colocamos a logo para ficar no centro e não mais a esquerda, pois não temos como dividir a logo e o menu juntos, então vamos dar uma linha para cada.*/
+     h1{
+         text-align: center;
+     }
+     /* fizemos a alteracao apenas no item necessario, nada mais, sobre escrevemos apenas o elemento position, o resto ele puxa tudo da nav raiz.*/
+     nav{
+         position: static;
+     }
+     /*mesmo esquema que a logo, os dois estavam dividindo o 100% entre 60-40, mas na tela pequena nao fica confortavel a leitura, então vamos dar a cada item uma linha.*/
+     .lista-beneficios, .imgbarb, .servicoscorte{
+        width: 100%;
+     }
+     .servicoscorte{
+        margin: 0;
+        margin-bottom: 10px;
+     }
+ }

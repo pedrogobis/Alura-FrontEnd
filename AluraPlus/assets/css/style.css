@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root{
+    --branco-principal:#FFFFFF;
+    --cinza-secundario: #c0c0c0;
+    --botao-azul:#167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter';
+    --botao-azul-efeito: #4d92e6;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+.principal{
+    background-image: url("../imgs/Background.png");
+    background-repeat: no-repeat;
+    /*preenche a caixa.*/
+    background-size: contain; 
+    /*Essa é nova e muito util, vai alinhar tudo ao centro centro EM RELAÇÃO A ALTURA*/
+    align-items: center;
+    /*text aling alinha tudo dentro do bloco ao centro em LINHA*/
+    text-align: center;
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+
+
+.container__caixa{
+    margin: 0 6em;
+}
+
+.container__botao{
+    display: block;
+    text-align: center;
+    background-color: var(--botao-azul);
+    color: var(--branco-principal);
+    text-decoration: none;
+    border: 1px 1px 1px var(--cinza-secundario);
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 16px;
+    
+}
+
+.container__botao:hover{
+    color: black;
+    background-color: var(--botao-azul-efeito);
+}
+
+.botao_secundario{
+    /*Duas classes no mesmo botão, n preciso repetir codigos.*/
+    background-color: transparent;
+    border: 2px solid var(--cinza-secundario);
+    color: var(--branco-principal);
+    
+    
+
+}
+
+.container__aviso{
+    text-align: center;
+    color: var(--cinza-secundario);
+    font-size: 12px;
+}
+
+.container__titulo{
+    font-size: 28px;
+    text-align: center;
+    font-weight: 700;
+    
+}
+
+.container__imagem{
+    margin: 1em 0 2em 0;
+}
+
+.secundario{
+    align-items: center;
+    margin: 0 10em;
+}
+
+.secundario__imagem{
+    width: 80%;
+}
+
+.descricao__titulo { 
+    color: var(--branco-principal);
+    text-align: left;
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: .1em;
+}
+
+.descricao__texto{
+    color: var(--cinza-secundario);
+    margin-bottom: 1em;
+}
+
+.container__botao_terceiro{
+    /* Eu usei o tamanho definido. porém a professora fez diferente, pois, com o display inlineblock vai ser melhor para adaptar a telas
+    width: 163px;*/
+    display: inline-block;
+    align-items: left;
+}
+
+.imagem__tela{
+    width: 100%;
+    
+}
+
+/*
+
+Comecei a fazer e fiz dividindo o grid, deu certo esteticamente, mas ela vai fazer com tabelas, então vou fazer também, mas vou deixar minha tentativa aqui.
+
+.terceiro{
+    grid-template-columns: 33% 33% 33%;
+}
+
+.container__caixa_terceiro{
+    margin: 0 8em;
+}
+
+.container__discricao{
+    padding: 2em;
+}
+
+.terceiro__titulo{
+    text-align: center;
+    align-items: center;
+}
+
+.terceiro__itens{
+    font-weight: bold;
+    font-size: 32px;
+    text-align: center;
+    align-items: center;
+
+}
+*/
+
+.dispositivos{
+    text-align: center;
+}
+
+.dispositivos__titulo{
+    color: var(--branco-principal);
+    text-align: center;
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: .1em;
+    align-items: center;
+}
+
+.dispositivos__lista{
+    /*display flex, fez toodos ficarem em linha, diferente das outras aulas
+    essa classe já estava com bold, por conta de ser um h3.
+    */
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin: 5em 0;
+    
+   
+}
+
+.lista__item{
+    font-size: 32px;
+    color: var(--branco-principal);
+    margin-bottom: 8em;
+}
+
+.rodape{
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.rodape__logo{
+    
+}
+
+.rodape__lista{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-top: 1em ;
+
+
+}
+
+.rodape__link > a{
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.rodape__link a:hover{
+    color: var(--botao-azul) ;
+}
+
+.rodape__link a:active{
+    color: rgb(85, 104, 156);
+}
+
+.rodape__texto{
+    color: var(--cinza-secundario);
+    font-size: 14px;
+    margin: 1em 0;
+}
+
+@media screen and (max-width: 480px) {
+    .principal, .container, .rodape, .dispositivos{
+        width: auto;
+    }
+    .rodape__lista,.dispositivos__lista,{
+        width: 100%;
+    }
+}
